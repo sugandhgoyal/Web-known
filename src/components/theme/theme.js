@@ -1,6 +1,17 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 export const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#047dff',
+    },
+    secondary: {
+      main: '#15D895',
+    },
+    text: {
+      primary: '#36415A',
+    }
+  },
   overrides: {
     MuiAvatar: {
       rounded: {
