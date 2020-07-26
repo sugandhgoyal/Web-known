@@ -6,6 +6,8 @@ import SignUp from './SignUp';
 import Services from './Services';
 import WorkingProcess from './WorkingProcess';
 import styled from 'styled-components';
+import HowWeDoIt from './HowWeDoIt';
+import Blog from './Blog';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -60,6 +62,10 @@ export const LandingPage = () => {
             <Services />
             <HorizontalLine />
             <WorkingProcess />
+            <HorizontalLine />
+            <HowWeDoIt />
+            <HorizontalLine />
+            <Blog />
         </>
     )
 }

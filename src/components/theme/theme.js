@@ -10,6 +10,7 @@ export const theme = createMuiTheme({
     },
     text: {
       primary: '#36415A',
+      secondary: '#9a6666',
     }
   },
   overrides: {

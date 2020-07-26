@@ -6,10 +6,9 @@ import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        padding: '50px',
+        padding: '90px 160px',
         textAlign: 'center',
         maxWidth: '100%',
-        background: '#EFF0F1',
     },
     img: {
         width: '500px',
@@ -25,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-start',
     },
     title: {
+        marginTop: '0',
         textAlign: 'left',
         fontSize: '30px',
         fontWeight: '700',
@@ -47,19 +47,15 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export const WorkingProcess = () => {
+export const HowWeDoIt = () => {
     const classes = useStyles();
 
     return (
         <Container className={classes.wrapper} maxWidth="lg">
             <Grid container>
-                <Grid item lg={6} xs={6}>
-                    <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/graph.png`} />
-                </Grid>
                 <Grid item lg={6} xs={6} className={classes.rightPart}>
-                    <Chip className={{ label: classes.chipLabel }} label="Our working process" color="primary" />
-                    <h1 className={classes.title}> Your Site’s Organic SEO Rankings Have A Definitive Effect On Your Business’s Bottom Line</h1>
-                    <p className={classes.subtitle}>We stay ahead of the curve with digital marketing trends. Our success has us leading the pack amongst our competitors with our ability to anticipate change and innovation</p>
+                    <h1 className={classes.title}>Watch As Your Business Grows With You</h1>
+                    <p className={classes.subtitle}>Web known stays ahead of the curve with digital marketing trends. Our success has us leading ability and innovation.</p>
                     <ul>
                     </ul>
                     <div className={classes.demo}>
@@ -70,6 +66,7 @@ export const WorkingProcess = () => {
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Targeted adverting"
+                                    secondary="Web-known stays ahead of the curve with digital marketing trends. Our success has us leading the pack amongst."
                                 />
                             </ListItem>
                             <ListItem>
@@ -78,30 +75,18 @@ export const WorkingProcess = () => {
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="In-depth analytics"
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary="Social media optimization"
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary="SEO (Search Engine Optimization)"
+                                    secondary="Web-known stays ahead of the curverese from digital marketing trends"
                                 />
                             </ListItem>
                         </List>
                     </div>
+                </Grid>
+                <Grid item lg={6} xs={6}>
+                    <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
                 </Grid>
             </Grid>
         </Container>
     )
 }
 
-export default WorkingProcess;
+export default HowWeDoIt;
