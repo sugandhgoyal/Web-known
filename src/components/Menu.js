@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useRef } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Link, Button } from '@material-ui/core';
 
@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
 
 export const Menu = () => {
     const classes = useStyles();
+    const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+    const myRef = useRef(null)
+    const executeScroll = () => scrollToRef(myRef)
     return (
         <Grid container >
             <Grid item lg={3} className={classes.gridItem}>
@@ -35,13 +38,13 @@ export const Menu = () => {
             </Grid>
             <Grid item lg={6} className={classes.gridItem}>
                 <ul className={classes.linkslist}>
-                    <Link className={classes.link} href="/" onClick={(e) => e.preventDefault()}>
-                        Link</Link>
-                    <Link className={classes.link} href="/" onClick={(e) => e.preventDefault()}>
+                    <Link className={classes.link} href="/#home">
+                        Home</Link>
+                    <Link className={classes.link} href="#services">
                         Services</Link>
-                    <Link className={classes.link} href="/" onClick={(e) => e.preventDefault()}>
+                    <Link className={classes.link} href="#blog">
                         Blog</Link>
-                    <Link className={classes.link} href="/" onClick={(e) => e.preventDefault()}>
+                    <Link className={classes.link} href="#contact">
                         Contact Us</Link>
                 </ul>
             </Grid >

@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { Container, Typography, Card, Grid, Chip, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText } from '@material-ui/core';
-import FolderIcon from '@material-ui/icons/Folder';
+import React from 'react';
+import { Container, Grid, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
@@ -13,9 +12,6 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '500px',
         objectFit: 'contain',
-    },
-    chipLabel: {
-        background: `${theme.palette.primary.main} !important`,
     },
     rightPart: {
         padding: '10px',
@@ -54,7 +50,7 @@ export const HowWeDoIt = () => {
         <Container className={classes.wrapper} maxWidth="lg">
             <Grid container>
                 <Grid item lg={6} xs={6} className={classes.rightPart}>
-                    <h1 className={classes.title}>Watch As Your Business Grows With You</h1>
+                    <h1 className={classes.title}>Watch As Your Business Grows With Us</h1>
                     <p className={classes.subtitle}>Web known stays ahead of the curve with digital marketing trends. Our success has us leading ability and innovation.</p>
                     <ul>
                     </ul>

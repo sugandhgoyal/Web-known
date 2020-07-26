@@ -8,6 +8,7 @@ import WorkingProcess from './WorkingProcess';
 import styled from 'styled-components';
 import HowWeDoIt from './HowWeDoIt';
 import Blog from './Blog';
+import ContactUs from './ContactUs';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const HorizontalLine = styled.div`
+export const HorizontalLine = styled.div`
     height: 1px;
     width: 100%;
     background: #dedbdb;
@@ -45,7 +46,7 @@ export const LandingPage = () => {
     return (
         <>
             <Menu />
-            <Grid container className={classes.wrapper}>
+            <Grid container className={classes.wrapper} id="#home">
                 <Grid item lg={6}>
                     <Chip avatar={<Avatar variant="rounded" className={classes.avatar}>Email</Avatar>} label="email@webknown.com" />
                     <Container>
@@ -66,6 +67,7 @@ export const LandingPage = () => {
             <HowWeDoIt />
             <HorizontalLine />
             <Blog />
+            <ContactUs />
         </>
     )
 }

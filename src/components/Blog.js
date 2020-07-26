@@ -78,7 +78,7 @@ export const Blog = () => {
     const classes = useStyles();
 
     return (
-        <Container className={classes.wrapper} maxWidth="lg">
+        <Container className={classes.wrapper} maxWidth="lg" id="blog">
             <h2 className={classes.heading}>Our Latest Article</h2>
             <p>The same way I wouldn’t book an apartment in Rome without using certainly would run.</p>
             <Grid container className={classes.cardcontainer}>

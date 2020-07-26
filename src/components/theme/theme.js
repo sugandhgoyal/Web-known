@@ -31,13 +31,12 @@ export const theme = createMuiTheme({
         paddingRight: '5px !important',
         height: '41px',
         padding: '3px',
+        borderRadius: '50px'
       },
       label: {
-        background: '#15d895',
-        color: 'white',
-        fontWeight: '700',
+        color: '#36415A',
+        fontWeight: '500',
         borderRadius: '24px',
-        margin: '0 10px',
         padding: '7px',
         fontSize: '15px !important'
       }
