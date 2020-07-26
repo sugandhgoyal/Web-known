@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        background: '#047dff',
+        background: `${theme.palette.primary.main}`,
         padding: '120px 0',
         margin: '90px 0',
         textAlign: 'center',

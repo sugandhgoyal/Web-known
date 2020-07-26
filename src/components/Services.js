@@ -23,22 +23,12 @@ const useStyles = makeStyles((theme) => ({
         width: '66px',
         objectFit: 'contain',
     },
-    submit: {
-        color: 'white',
-        margin: '10px',
-        padding: '15px 63px',
-    },
     root: {
         margin: '20px',
         height: '300px',
         width: '250px',
         transform: 'translateY(0)',
         transition: 'all 0.3s'
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
     },
     title: {
         fontSize: ' 20px',
@@ -51,9 +41,6 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '27px',
         fontFamily: '"Work Sans", sans-serif',
         fontWeight: '500',
-    },
-    pos: {
-        marginBottom: 12,
     },
     cardcontainer: {
         'justifyContent': 'space-evenly',

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
     Card, TextField, Container, Link, Button,
     List, ListItem, ListItemText,
-    Typography, CardActions,
+    Typography,
     CardContent
 } from '@material-ui/core';
 import { HorizontalLine } from './LandingPage';
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '64px',
         transition: 'all 0.3s',
         '&:hover': {
-            background: '#15D895',
+            background: `${theme.palette.secondary.main}`,
             color: '#ffffff',
             transition: 'all 0.3s',
         }
@@ -107,16 +107,16 @@ export const ContactUs = () => {
             <HorizontalLine />
             <Container className={classes.bottom} maxWidth="lg">
                 <Container className={classes.bottomPart1} maxWidth="lg">
-                    <Link href="#" className={classes.icon} onClick={(event) => { event.preventDefault() }}>
+                    <Link href="#" className={classes.icon}>
                         <FacebookIcon />
                     </Link>
-                    <Link href="#" className={classes.icon} onClick={(event) => { event.preventDefault() }}>
+                    <Link href="#" className={classes.icon}>
                         <InstagramIcon />
                     </Link>
-                    <Link href="#" className={classes.icon} onClick={(event) => { event.preventDefault() }}>
+                    <Link href="#" className={classes.icon}>
                         <TwitterIcon />
                     </Link>
-                    <Link href="#" className={classes.icon} onClick={(event) => { event.preventDefault() }}>
+                    <Link href="#" className={classes.icon}>
                         <LinkedInIcon />
                     </Link>
                 </Container>
@@ -126,13 +126,13 @@ export const ContactUs = () => {
                         <ListItemLink href="#home">
                             <ListItemText primary="Home" />
                         </ListItemLink>
-                        <ListItem href="#simple-list">
+                        <ListItem href="#services">
                             <ListItemText primary="Services" />
                         </ListItem>
-                        <ListItem href="#simple-list">
+                        <ListItem href="#blog">
                             <ListItemText primary="Blog" />
                         </ListItem>
-                        <ListItem href="#simple-list">
+                        <ListItem href="#contact">
                             <ListItemText primary="Contact Us" />
                         </ListItem>
                     </List>

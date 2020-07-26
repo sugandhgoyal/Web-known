@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%'
     },
     button: {
-        background: '#047dff',
+        background: `${theme.palette.primary.main}`,
         display: 'inline-block',
         padding: '18px 29px',
         borderRadius: '5px',

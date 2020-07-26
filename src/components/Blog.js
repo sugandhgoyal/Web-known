@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react';
 import { Container, Typography, Card, Grid, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
@@ -33,18 +33,11 @@ const useStyles = makeStyles((theme) => ({
     },
     root: {
         margin: '20px',
-        // height: '300px',
-        // width: '250px',
         transform: 'translateY(0)',
         transition: 'all 0.3s',
         visibility: 'visible',
         animationDelay: '1s',
         animationName: 'fadeInUp',
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
     },
     title: {
         fontSize: ' 20px',
