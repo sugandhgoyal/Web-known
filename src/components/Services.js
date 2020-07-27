@@ -60,7 +60,7 @@ export const Services = () => {
             <p>The same way I wouldn’t book in Rome without using certainly would run.</p>
             <Grid container className={classes.cardcontainer}>
                 <Grid item lg={3} sm={6} xs={12}>
-                    <Card className={classes.root} lg={3}>
+                    <Card className={`${classes.root} fade-in`} lg={3}>
                         <Container className={classes.imgContainer}>
                             <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/eye.png`} />
                         </Container>
@@ -73,7 +73,7 @@ export const Services = () => {
                     </Card>
                 </Grid>
                 <Grid item lg={3} sm={6} xs={12}>
-                    <Card className={classes.root} lg={3}>
+                    <Card className={`${classes.root} fade-in`} lg={3}>
                         <Container className={classes.imgContainer}>
                             <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/heart.png`} />
                         </Container>
@@ -86,7 +86,7 @@ export const Services = () => {
                     </Card>
                 </Grid>
                 <Grid item lg={3} sm={6} xs={12}>
-                    <Card className={classes.root} lg={3}>
+                    <Card className={`${classes.root} fade-in`} lg={3}>
                         <Container className={classes.imgContainer}>
                             <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/dart.png`} />
                         </Container>
@@ -99,7 +99,7 @@ export const Services = () => {
                     </Card>
                 </Grid>
                 <Grid item lg={3} sm={6} xs={12}>
-                    <Card className={classes.root} lg={3}>
+                    <Card className={`${classes.root} fade-in`} lg={3}>
                         <CardContent className={classes.contentContainer}>
                             <Container className={classes.imgContainer}>
                                 <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/chess.png`} />

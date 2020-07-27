@@ -76,7 +76,7 @@ export const Blog = () => {
             <p>The same way I wouldn’t book an apartment in Rome without using certainly would run.</p>
             <Grid container className={classes.cardcontainer}>
                 <Grid item lg={4} sm={6} xs={12}>
-                    <Card className={classes.root}>
+                    <Card className={`${classes.root} fade-in`}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
@@ -99,7 +99,7 @@ export const Blog = () => {
                     </Card>
                 </Grid>
                 <Grid item lg={4} sm={6} xs={12}>
-                    <Card className={classes.root}>
+                    <Card className={`${classes.root} fade-in`}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"
@@ -122,7 +122,7 @@ export const Blog = () => {
                     </Card>
                 </Grid>
                 <Grid item lg={4} sm={6} xs={12}>
-                    <Card className={classes.root}>
+                    <Card className={`${classes.root} fade-in`}>
                         <CardActionArea>
                             <CardMedia
                                 component="img"

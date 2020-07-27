@@ -47,12 +47,12 @@ export const WorkingProcess = () => {
     const classes = useStyles();
 
     return (
-        <Container className={classes.wrapper} maxWidth="lg">
+        <Container className={classes.wrapper} maxWidth="lg" id="process">
             <Grid container>
                 <Grid item lg={6} xs={6}>
-                    <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/graph.png`} />
+                    <img className={`${classes.img} slide-in from-left`} src={`${process.env.PUBLIC_URL}/assets/graph.png`} />
                 </Grid>
-                <Grid item lg={6} xs={6} className={classes.rightPart}>
+                <Grid item lg={6} xs={6} className={`${classes.rightPart} slide-in from-left`}>
                     <Chip label="Our working process" color="primary" />
                     <h1 className={classes.title}> Your Site’s Organic SEO Rankings Have A Definitive Effect On Your Business’s Bottom Line</h1>
                     <p className={classes.subtitle}>We stay ahead of the curve with digital marketing trends. Our success has us leading the pack amongst our competitors with our ability to anticipate change and innovation</p>

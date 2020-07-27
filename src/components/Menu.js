@@ -4,9 +4,9 @@ import { Grid, Link, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     img: {
-        width: '200px',
-        height: '70px',
-        objectFit: 'cover'
+        height: '50px',
+        objectFit: 'cover',
+        padding: '8px 0 0 80px',
     },
     linkslist: {
         listStyleType: 'none',
@@ -31,8 +31,8 @@ export const Menu = () => {
   
     return (
         <Grid container >
-            <Grid item lg={3} className={classes.gridItem}>
-                <img src={process.env.PUBLIC_URL + '/assets/logo.png'} className={classes.img} />
+            <Grid item lg={4} className={classes.gridItem}>
+                <img src={process.env.PUBLIC_URL + '/assets/logo2.png'} className={classes.img} />
             </Grid>
             <Grid item lg={6} className={classes.gridItem}>
                 <ul className={classes.linkslist}>
@@ -46,7 +46,7 @@ export const Menu = () => {
                         Contact Us</Link>
                 </ul>
             </Grid >
-            <Grid item lg={3} className={classes.gridItem}><Button className={classes.button} variant="outlined">Let's chat</Button></Grid>
+            <Grid item lg={2} className={classes.gridItem}><Button className={classes.button} variant="outlined">Let's chat</Button></Grid>
         </Grid>
     )
 }

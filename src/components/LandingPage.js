@@ -1,7 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import Menu from './Menu';
-import { Chip, Avatar, Container, Grid, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import SignUp from './SignUp';
 import Services from './Services';
 import WorkingProcess from './WorkingProcess';
@@ -9,30 +7,8 @@ import styled from 'styled-components';
 import HowWeDoIt from './HowWeDoIt';
 import Blog from './Blog';
 import ContactUs from './ContactUs';
-
-const useStyles = makeStyles((theme) => ({
-    wrapper: {
-        padding: '1% 8%'
-    },
-    leftHeading: {
-        color: '#36415a',
-        fontSize: '48px',
-        fontWeight: '700',
-        lineHeight: '55px',
-        margin: '20px 0',
-    },
-    image: {
-        objectFit: 'contain',
-        width: '100%'
-    },
-    button: {
-        background: `${theme.palette.primary.main}`,
-        display: 'inline-block',
-        padding: '18px 29px',
-        borderRadius: '5px',
-        color: 'white',
-    }
-}));
+import './theme/animation.css';
+import IntroPage from './IntroPage';
 
 export const HorizontalLine = styled.div`
     height: 1px;
@@ -41,35 +17,54 @@ export const HorizontalLine = styled.div`
 `;
 
 export const LandingPage = () => {
-    const classes = useStyles();
+  useEffect(() => {
+    const faders = document.querySelectorAll(".fade-in");
+    const sliders = document.querySelectorAll(".slide-in");
+    const appearOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px -250px 0px"
+    };
 
-    return (
-        <>
-            <Menu />
-            <Grid container className={classes.wrapper} id="#home">
-                <Grid item lg={6}>
-                    <Chip avatar={<Avatar variant="rounded" className={classes.avatar}>Email</Avatar>} label="email@webknown.com" />
-                    <Container>
-                        <h1 className={classes.leftHeading}>How Much Traffic Should You Actually Be Getting!</h1>
-                        <p>Gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole that covered the whole</p>
-                        <Button className={classes.button}>Contact Today</Button>
-                    </Container>
-                </Grid>
-                <Grid item lg={6}>
-                    <img className={classes.image} src={process.env.PUBLIC_URL + '/assets/freelance.jpg'} />
-                </Grid>
-            </Grid>
-            <SignUp />
-            <Services />
-            <HorizontalLine />
-            <WorkingProcess />
-            <HorizontalLine />
-            <HowWeDoIt />
-            <HorizontalLine />
-            <Blog />
-            <ContactUs />
-        </>
-    )
+    const appearOnScroll = new IntersectionObserver(function (
+      entries,
+      appearOnScroll
+    ) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add("appear");
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    },
+      appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+    sliders.forEach(slider => {
+      appearOnScroll.observe(slider);
+    });
+
+  }, []);
+
+  return (
+    <>
+      <Menu />
+      <IntroPage />
+      <SignUp />
+      <Services />
+      <HorizontalLine />
+      <WorkingProcess />
+      <HorizontalLine />
+      <HowWeDoIt />
+      <HorizontalLine />
+      <Blog />
+      <ContactUs />
+    </>
+  )
 }
 
 export default LandingPage;
