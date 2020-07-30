@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         maxWidth: '100%',
         background: '#2b3e65',
+        [theme.breakpoints.down('sm')]: {
+            padding: '50px 15px',
+        }
     },
     top: {
         color: 'white',
@@ -29,12 +32,19 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '400',
         fontSize: '30px',
         color: '#ffffff',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26px',
+        }
     },
     bottom: {
         color: 'white',
         display: 'flex',
         justifyContent: 'space-between',
         padding: '50px 0',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+        }
+        
     },
     bottomPart1: {
         display: 'flex',

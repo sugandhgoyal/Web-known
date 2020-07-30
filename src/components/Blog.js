@@ -11,11 +11,22 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '90px',
         textAlign: 'center',
         maxWidth: '100%',
+        '& p': {
+            lineHeight: '27px',
+            color: '#36415A',
+            fontSize: '16px'
+        },
+        [theme.breakpoints.down('sm')]: {
+            padding: '50px 15px',
+        }
     },
     heading: {
         fontSize: '34px !important',
         lineHeight: '40px !important',
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26px !important',
+        }
     },
     imgContainer: {
         minHeight: '80px',
@@ -58,7 +69,10 @@ const useStyles = makeStyles((theme) => ({
     },
     cardcontainer: {
         'justifyContent': 'space-between',
-        'padding': '0 160px'
+        'padding': '0 160px',
+        [theme.breakpoints.down('sm')]: {
+            'padding': '0',
+        }
     },
     button: {
         padding: '11px 33px',

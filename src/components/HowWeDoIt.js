@@ -8,12 +8,15 @@ const useStyles = makeStyles((theme) => ({
         padding: '90px 160px',
         textAlign: 'center',
         maxWidth: '100%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '50px 15px',
+        }
     },
     img: {
         width: '500px',
         objectFit: 'contain',
         [theme.breakpoints.down('sm')]: {
-            width: '100px',
+            width: '300px',
         },
     },
     rightPart: {
@@ -30,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
         textTransform: 'capitalize',
         color: '#36415A',
         fontFamily: '"Work Sans", sans-serif',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26px',
+        }
     },
     subtitle: {
         textAlign: 'left',
@@ -55,8 +61,6 @@ export const HowWeDoIt = () => {
                 <Grid item lg={6} xs={12} className={`${classes.rightPart} slide-in from-right`}>
                     <h1 className={classes.title}>Watch As Your Business Grows With Us</h1>
                     <p className={classes.subtitle}>Web known stays ahead of the curve with digital marketing trends. Our success has us leading ability and innovation.</p>
-                    <ul>
-                    </ul>
                     <div className={classes.demo}>
                         <List>
                             <ListItem>
