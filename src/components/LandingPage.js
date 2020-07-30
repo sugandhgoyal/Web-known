@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react'
-import Menu from './Menu';
+import Menu from './Menu/DesktopMenu';
 import SignUp from './SignUp';
 import Services from './Services';
 import WorkingProcess from './WorkingProcess';
@@ -9,6 +9,7 @@ import Blog from './Blog';
 import ContactUs from './ContactUs';
 import './theme/animation.css';
 import IntroPage from './IntroPage';
+import HamburgerMenu from './Menu/HamburgerMenu';
 
 export const HorizontalLine = styled.div`
     height: 1px;
@@ -53,6 +54,7 @@ export const LandingPage = () => {
   return (
     <>
       <Menu />
+      <HamburgerMenu />
       <IntroPage />
       <SignUp />
       <Services />

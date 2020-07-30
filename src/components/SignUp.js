@@ -9,24 +9,39 @@ const useStyles = makeStyles((theme) => ({
         margin: '90px 0',
         textAlign: 'center',
         maxWidth: '100%',
+        [theme.breakpoints.down('sm')]: {
+            margin: '50px 0',
+            padding: '50px 15px',
+        }
     },
     heading: {
         color: '#ffffff',
         fontSize: '34px !important',
         lineHeight: '40px !important',
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26px !important',
+            margin: '0'
+        }
     },
     textfield: {
         margin: '10px',
         background: 'white',
         borderRadius: '5px',
         border: '1px solid white',
-        border: 'none'
+        border: 'none',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+        }
     },
     submit: {
         color: 'white',
         margin: '10px',
         padding: '15px 63px',
+        fontWeight: '600',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+        }
     }
 }));
 

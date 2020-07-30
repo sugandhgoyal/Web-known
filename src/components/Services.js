@@ -8,11 +8,23 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '90px',
         textAlign: 'center',
         maxWidth: '100%',
+        '& p': {
+            lineHeight: '27px',
+            color: '#36415A',
+            fontSize: '16px'
+        },
+        [theme.breakpoints.down('sm')]: {
+            padding: '0 15px 50px 15px;',
+        }
     },
     heading: {
         fontSize: '34px !important',
         lineHeight: '40px !important',
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26px !important',
+            margin: '0'
+        }
     },
     imgContainer: {
         minHeight: '80px',
@@ -22,29 +34,51 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '66px',
         objectFit: 'contain',
+        [theme.breakpoints.down('sm')]: {
+            width: '40px',
+        },
     },
     root: {
         margin: '20px',
         height: '300px',
         width: '250px',
         transform: 'translateY(0)',
-        transition: 'all 0.3s'
+        transition: 'all 0.3s',
+        [theme.breakpoints.down('sm')]: {
+            height: '100px',
+            width: '160px',
+            transform: 'none',
+            transition: 'none',
+            height: '250px',
+            margin: '0 0px 20px 7px',
+        },
     },
     title: {
         fontSize: ' 20px',
         fontWeight: '600',
         lineHeight: '24px',
         color: '#36415A',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '14px !important',
+            lineHeight: '17px !important',
+        }
     },
     content: {
         fontSize: '16px',
         lineHeight: '27px',
         fontFamily: '"Work Sans", sans-serif',
         fontWeight: '500',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '12px',
+            lineHeight: '18px',
+        }
     },
     cardcontainer: {
         'justifyContent': 'space-evenly',
-        'padding': '0 160px'
+        'padding': '0 160px',
+        [theme.breakpoints.down('sm')]: {
+            'padding': '0',
+        }
     },
     contentContainer: {
         textAlign: 'left',
@@ -59,7 +93,7 @@ export const Services = () => {
             <h2 className={classes.heading}>High-End Services For Digital Business</h2>
             <p>The same way I wouldn’t book in Rome without using certainly would run.</p>
             <Grid container className={classes.cardcontainer}>
-                <Grid item lg={3} sm={6} xs={12}>
+                <Grid item lg={3} sm={6} xs={6}>
                     <Card className={`${classes.root} fade-in`} lg={3}>
                         <Container className={classes.imgContainer}>
                             <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/eye.png`} />
@@ -67,12 +101,12 @@ export const Services = () => {
                         <CardContent className={classes.contentContainer}>
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
                                 Keyword & Market Research</Typography>
-                            <Typography className={classes.content}  color="textSecondary" component="h2">
+                            <Typography className={classes.content} color="textSecondary" component="h2">
                                 Lock in and no minimum terms. Cash out to your account anytime.</Typography>
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item lg={3} sm={6} xs={12}>
+                <Grid item lg={3} sm={6} xs={6}>
                     <Card className={`${classes.root} fade-in`} lg={3}>
                         <Container className={classes.imgContainer}>
                             <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/heart.png`} />
@@ -80,12 +114,12 @@ export const Services = () => {
                         <CardContent className={classes.contentContainer}>
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
                                 UX & Product Design</Typography>
-                            <Typography className={classes.content}  color="textSecondary" component="h2">
+                            <Typography className={classes.content} color="textSecondary" component="h2">
                                 Lock in and no minimum terms. Cash out to your account anytime.</Typography>
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item lg={3} sm={6} xs={12}>
+                <Grid item lg={3} sm={6} xs={6}>
                     <Card className={`${classes.root} fade-in`} lg={3}>
                         <Container className={classes.imgContainer}>
                             <img className={classes.img} src={`${process.env.PUBLIC_URL}/assets/dart.png`} />
@@ -93,12 +127,12 @@ export const Services = () => {
                         <CardContent className={classes.contentContainer}>
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
                                 Digital Marketing</Typography>
-                            <Typography className={classes.content}  color="textSecondary" component="div">Lock in and no minimum terms. Cash out to your account anytime.
+                            <Typography className={classes.content} color="textSecondary" component="div">Lock in and no minimum terms. Cash out to your account anytime.
                             </Typography>
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item lg={3} sm={6} xs={12}>
+                <Grid item lg={3} sm={6} xs={6}>
                     <Card className={`${classes.root} fade-in`} lg={3}>
                         <CardContent className={classes.contentContainer}>
                             <Container className={classes.imgContainer}>
@@ -106,7 +140,7 @@ export const Services = () => {
                             </Container>
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
                                 Social Media Strategy</Typography>
-                            <Typography className={classes.content}  color="textSecondary" component="h2">
+                            <Typography className={classes.content} color="textSecondary" component="h2">
                                 Lock in and no minimum terms. Cash out to your account anytime.</Typography>
                         </CardContent>
                     </Card>

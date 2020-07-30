@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '500px',
         objectFit: 'contain',
+        [theme.breakpoints.down('sm')]: {
+            width: '100px',
+        },
     },
     rightPart: {
         padding: '10px',
@@ -49,7 +52,7 @@ export const HowWeDoIt = () => {
     return (
         <Container className={classes.wrapper} maxWidth="lg">
             <Grid container>
-                <Grid item lg={6} xs={6} className={`${classes.rightPart} slide-in from-right`}>
+                <Grid item lg={6} xs={12} className={`${classes.rightPart} slide-in from-right`}>
                     <h1 className={classes.title}>Watch As Your Business Grows With Us</h1>
                     <p className={classes.subtitle}>Web known stays ahead of the curve with digital marketing trends. Our success has us leading ability and innovation.</p>
                     <ul>
@@ -77,7 +80,7 @@ export const HowWeDoIt = () => {
                         </List>
                     </div>
                 </Grid>
-                <Grid item lg={6} xs={6}>
+                <Grid item lg={6} xs={12}>
                     <img className={`${classes.img} slide-in from-right`} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
                 </Grid>
             </Grid>

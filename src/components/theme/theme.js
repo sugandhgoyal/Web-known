@@ -13,6 +13,15 @@ export const theme = createMuiTheme({
       secondary: '#9a6666',
     }
   },
+  breakpoints: {
+    values: {
+      lg: 1280,
+      md: 960,
+      sm: 600,
+      xl: 1920,
+      xs: 0,
+    }
+  },
   overrides: {
     MuiAvatar: {
       rounded: {
@@ -23,7 +32,6 @@ export const theme = createMuiTheme({
         fontWeight: '700',
         background: '#15d895',
         fontSize: '15px'
-
       }
     },
     MuiChip: {

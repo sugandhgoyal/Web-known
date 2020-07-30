@@ -3,6 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Link, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+    container: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
+    },
     img: {
         height: '50px',
         objectFit: 'cover',
@@ -28,9 +33,9 @@ const useStyles = makeStyles((theme) => ({
 
 export const Menu = () => {
     const classes = useStyles();
-  
+
     return (
-        <Grid container >
+        <Grid container className={classes.container}>
             <Grid item lg={4} className={classes.gridItem}>
                 <img src={process.env.PUBLIC_URL + '/assets/logo2.png'} className={classes.img} />
             </Grid>

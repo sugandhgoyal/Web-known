@@ -3,49 +3,76 @@ import { Chip, Avatar, Container, Grid, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-    wrapper: {
-      padding: '1% 8%'
+  wrapper: {
+    padding: '1% 8%',
+    [theme.breakpoints.down('sm')]: {
+      padding: '15px',
     },
-    leftHeading: {
-      color: '#36415a',
-      fontSize: '48px',
-      fontWeight: '700',
-      lineHeight: '55px',
-      margin: '20px 0',
+  },
+  container: {
+    '& p': {
+      lineHeight: '27px',
+      color: '#36415A',
     },
-    image: {
-      objectFit: 'contain',
-      width: '100%'
+    [theme.breakpoints.down('sm')]: {
+      padding: '0',
+      '& p': {
+        lineHeight: '27px',
+        color: '#36415A',
+      }
     },
-    button: {
-      background: `${theme.palette.primary.main}`,
-      display: 'inline-block',
-      padding: '18px 29px',
-      borderRadius: '5px',
-      color: 'white',
+  },
+  leftHeading: {
+    color: '#36415a',
+    fontSize: '48px',
+    fontWeight: '700',
+    lineHeight: '55px',
+    margin: '20px 0',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '26px',
+      lineHeight: '36px',
+    },
+  },
+  image: {
+    objectFit: 'contain',
+    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
     }
-  }));
-  
-export const IntroPage = () => {
-    const classes = useStyles();
+  },
+  button: {
+    background: `${theme.palette.primary.main}`,
+    display: 'inline-block',
+    padding: '18px 29px',
+    borderRadius: '5px',
+    color: 'white',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '14px',
+      margin: '30px 0',
+    },
+  }
+}));
 
-    return (
-        <div>
-            <Grid container className={classes.wrapper} id="#home">
-                <Grid item lg={6}>
-                    <Chip avatar={<Avatar variant="rounded" className={classes.avatar}>Email</Avatar>} label="email@webknown.com" />
-                    <Container>
-                        <h1 className={classes.leftHeading}>How Much Traffic Should You Actually Be Getting!</h1>
-                        <p>Gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole that covered the whole</p>
-                        <Button className={classes.button}>Contact Today</Button>
-                    </Container>
-                </Grid>
-                <Grid item lg={6}>
-                    <img className={classes.image} src={process.env.PUBLIC_URL + '/assets/freelance.jpg'} />
-                </Grid>
-            </Grid>
-        </div>
-    )
+export const IntroPage = () => {
+  const classes = useStyles();
+
+  return (
+    <div>
+      <Grid container className={classes.wrapper} id="#home">
+        <Grid item lg={6} xs={12}>
+          <Chip avatar={<Avatar variant="rounded" className={classes.avatar}>Email</Avatar>} label="email@webknown.com" />
+          <Container className={classes.container}>
+            <h1 className={classes.leftHeading}>How Much Traffic Should You Actually Be Getting!</h1>
+            <p>Gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole that covered the whole</p>
+            <Button className={classes.button}>Contact Today</Button>
+          </Container>
+        </Grid>
+        <Grid item lg={6} xs={12}>
+          <img className={classes.image} src={process.env.PUBLIC_URL + '/assets/freelance.jpg'} />
+        </Grid>
+      </Grid>
+    </div>
+  )
 }
 
 export default IntroPage;
