@@ -3,7 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    width: '100%'
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
   },
   img: {
     height: '60px',

@@ -4,7 +4,8 @@ import { Grid, Link, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        [theme.breakpoints.down('sm')]: {
+        display: 'flex',
+        [theme.breakpoints.down('600')]: {
             display: 'none',
         },
     },
