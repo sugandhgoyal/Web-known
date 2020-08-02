@@ -150,7 +150,7 @@ export const ContactUs = () => {
                         </ListItem>
                     </List>
                 </Container>
-                <Container className={classes.bottomPart3} maxWidth="lg">
+                {/* <Container className={classes.bottomPart3} maxWidth="lg">
                     <Card className={classes.root}>
                         <CardContent>
                             <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
@@ -161,7 +161,7 @@ export const ContactUs = () => {
                                 email@webknown.com</Typography>
                         </CardContent>
                     </Card>
-                </Container>
+                </Container> */}
             </Container>
         </Container>
     )

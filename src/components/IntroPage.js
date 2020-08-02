@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     [theme.breakpoints.down('600')]: {
       fontSize: '14px',
-      margin: '30px 0',
+      margin: '20px 0 0 0',
     },
   }
 }));
