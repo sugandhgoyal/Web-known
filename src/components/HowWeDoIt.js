@@ -2,20 +2,21 @@ import React from 'react';
 import { Container, Grid, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import RoundedCheckbox from './Fields/RoundedCheckbox';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         padding: '90px 160px',
         textAlign: 'center',
         maxWidth: '100%',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             padding: '50px 15px',
         }
     },
     img: {
         width: '500px',
         objectFit: 'contain',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             width: '300px',
         },
     },
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: 'capitalize',
         color: '#36415A',
         fontFamily: '"Work Sans", sans-serif',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             fontSize: '26px',
         }
     },
@@ -47,9 +48,6 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: '"Work Sans", sans-serif',
         marginTop: '0',
     },
-    checkbox: {
-        color: `${theme.palette.secondary.main} !important`,
-    }
 }));
 
 export const HowWeDoIt = () => {
@@ -65,7 +63,7 @@ export const HowWeDoIt = () => {
                         <List>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
+                                    <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Targeted adverting"
@@ -74,7 +72,7 @@ export const HowWeDoIt = () => {
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
+                                    <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="In-depth analytics"

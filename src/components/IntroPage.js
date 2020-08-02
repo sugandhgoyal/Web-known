@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: '1% 8%',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('600')]: {
       padding: '15px',
     },
   },
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: '27px',
       color: '#36415A',
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('600')]: {
       padding: '0',
       '& p': {
         lineHeight: '27px',
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
     lineHeight: '55px',
     margin: '20px 0',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('600')]: {
       fontSize: '26px',
       lineHeight: '36px',
     },
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     objectFit: 'contain',
     width: '100%',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('600')]: {
       display: 'none'
     }
   },
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '18px 29px',
     borderRadius: '5px',
     color: 'white',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('600')]: {
       fontSize: '14px',
       margin: '30px 0',
     },

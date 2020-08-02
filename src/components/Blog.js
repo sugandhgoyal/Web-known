@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
             color: '#36415A',
             fontSize: '16px'
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             padding: '50px 15px',
         }
     },
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '34px !important',
         lineHeight: '40px !important',
         fontWeight: '700',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
         }
     },
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     cardcontainer: {
         'justifyContent': 'space-between',
         'padding': '0 160px',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             'padding': '0',
         }
     },

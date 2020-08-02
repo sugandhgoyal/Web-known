@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
             color: '#36415A',
             fontSize: '16px'
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             padding: '0 15px 50px 15px;',
         }
     },
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '34px !important',
         lineHeight: '40px !important',
         fontWeight: '700',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
             margin: '0'
         }
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '66px',
         objectFit: 'contain',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             width: '40px',
         },
     },
@@ -44,13 +44,12 @@ const useStyles = makeStyles((theme) => ({
         width: '250px',
         transform: 'translateY(0)',
         transition: 'all 0.3s',
-        [theme.breakpoints.down('sm')]: {
-            height: '100px',
-            width: '160px',
+        [theme.breakpoints.down('600')]: {
+            width: '96% !important',
+            margin: '0px 5% 8% 0px',
             transform: 'none',
             transition: 'none',
             height: '250px',
-            margin: '0 0px 20px 7px',
         },
     },
     title: {
@@ -58,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '600',
         lineHeight: '24px',
         color: '#36415A',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             fontSize: '14px !important',
             lineHeight: '17px !important',
         }
@@ -68,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '27px',
         fontFamily: '"Work Sans", sans-serif',
         fontWeight: '500',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             fontSize: '12px',
             lineHeight: '18px',
         }
@@ -76,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     cardcontainer: {
         'justifyContent': 'space-evenly',
         'padding': '0 160px',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             'padding': '0',
         }
     },

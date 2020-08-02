@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container, Grid, Chip, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import RoundedCheckbox from './Fields/RoundedCheckbox';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -13,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '500px',
         objectFit: 'contain',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             display: 'none'
         }
     },
     leftPart: {
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             display: 'none',
             width: '0'
         }
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: 'capitalize',
         color: '#36415A',
         fontFamily: '"Work Sans", sans-serif',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             fontSize: '26px',
         }
     },
@@ -49,16 +50,13 @@ const useStyles = makeStyles((theme) => ({
         color: '#36415A',
         fontFamily: '"Work Sans", sans-serif',
         marginTop: '0',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             '& p': {
                 lineHeight: '27px',
                 fontSize: '16px'
             },
         }
     },
-    checkbox: {
-        color: `${theme.palette.secondary.main} !important`,
-    }
 }));
 
 export const WorkingProcess = () => {
@@ -78,7 +76,7 @@ export const WorkingProcess = () => {
                         <List>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
+                                    <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Targeted adverting"
@@ -86,7 +84,7 @@ export const WorkingProcess = () => {
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
+                                    <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="In-depth analytics"
@@ -94,7 +92,7 @@ export const WorkingProcess = () => {
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
+                                    <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="Social media optimization"
@@ -102,7 +100,7 @@ export const WorkingProcess = () => {
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
-                                    <CheckCircleOutlineIcon className={{ label: classes.checkbox }} />
+                                    <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
                                     primary="SEO (Search Engine Optimization)"

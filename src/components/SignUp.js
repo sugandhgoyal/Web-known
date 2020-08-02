@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '90px 0',
         textAlign: 'center',
         maxWidth: '100%',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             margin: '50px 0',
             padding: '50px 15px',
         }
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '34px !important',
         lineHeight: '40px !important',
         fontWeight: '700',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
             margin: '0'
         }
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '5px',
         border: '1px solid white',
         border: 'none',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             width: '90%',
         }
     },
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '10px',
         padding: '15px 63px',
         fontWeight: '600',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('600')]: {
             width: '90%',
         }
     }

@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('600')]: {
       display: 'none',
     },
   },
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     height: '60px',
     objectFit: 'cover',
     padding: '0 0 0 30%',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('600')]: {
       display: 'none',
     },
   },
@@ -33,13 +33,13 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.5s',
     paddingTop: '60px',
     textAlign: 'center',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('600')]: {
       display: 'none',
     },
   },
   menuButton: {
     fontSize: '25px',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('600')]: {
       display: 'none',
     },
   },
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     display: 'block',
     transition: '0.3s',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('600')]: {
       display: 'none',
     },
     '& hover': {
