@@ -4,11 +4,14 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        background: `${theme.palette.primary.main}`,
+        background: `url(${process.env.PUBLIC_URL}/assets/background.jpg)`,
         padding: '120px 0',
         margin: '90px 0',
         textAlign: 'center',
         maxWidth: '100%',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        position: 'relative',
         [theme.breakpoints.down('600')]: {
             margin: '50px 0',
             padding: '50px 15px',
@@ -16,9 +19,11 @@ const useStyles = makeStyles((theme) => ({
     },
     heading: {
         color: '#ffffff',
-        fontSize: '34px !important',
+        fontSize: '42px !important',
         lineHeight: '40px !important',
         fontWeight: '700',
+        width: '50%',
+        margin: '30px auto',
         [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
             margin: '0'
@@ -45,6 +50,32 @@ const useStyles = makeStyles((theme) => ({
     },
     label: {
         backgroundColor: "white"
+    },
+    circle: {
+        top: '12%',
+        left: '48%',
+        position: 'absolute',
+        animation: `8s $spin linear infinite`,
+        zIndex: '1',
+    },
+    cross: {
+        right: '5%',
+        position: 'absolute',
+        animation: `8s $spin linear infinite`,
+        zIndex: '1',
+    },
+    triangle: {
+        top: '12%',
+        left: '9%',
+        position: 'absolute',
+        animation: `8s $spin linear infinite`,
+        zIndex: '1',
+    },
+    '@keyframes spin': {
+        "100%":
+        {
+            transform: 'rotate(360deg)',
+        }
     }
 }));
 
@@ -53,6 +84,7 @@ export const SignUp = () => {
 
     return (
         <Container className={`${classes.wrapper}`} maxWidth="lg">
+            <img className={classes.circle} src={`${process.env.PUBLIC_URL}/assets/circle.png`} />
             <h2 className={`${classes.heading} fade-in`}>Don’t Forget To Check Your Website Score. It’s Free!</h2>
             <TextField
                 InputLabelProps={{
@@ -77,6 +109,8 @@ export const SignUp = () => {
                 label="Email"
                 variant="outlined" />
             <Button size="large" className={`${classes.submit} fade-in`} variant="contained" color="secondary" >Submit</Button>
+            <img className={classes.triangle} src={`${process.env.PUBLIC_URL}/assets/triangle.png`} />
+            <img className={classes.cross} src={`${process.env.PUBLIC_URL}/assets/cross.png`} />
         </Container>
     )
 }
