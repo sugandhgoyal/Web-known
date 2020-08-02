@@ -51,8 +51,16 @@ export const SignUp = () => {
     return (
         <Container className={`${classes.wrapper}`} maxWidth="lg">
             <h2 className={`${classes.heading} fade-in`}>Don’t Forget To Check Your Website Score. It’s Free!</h2>
-            <TextField className={`${classes.textfield} fade-in`} id="outlined-basic" label="Name" variant="outlined" />
-            <TextField className={`${classes.textfield} fade-in`} id="outlined-basic" label="Email" variant="outlined" />
+            <TextField
+                className={`${classes.textfield} fade-in`}
+                id="outlined-basic"
+                label="Name"
+                variant="outlined" />
+            <TextField
+                className={`${classes.textfield} fade-in`}
+                id="outlined-basic"
+                label="Email"
+                variant="outlined" />
             <Button size="large" className={`${classes.submit} fade-in`} variant="contained" color="secondary" >Submit</Button>
         </Container>
     )
