@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Grid, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import RoundedCheckbox from './Fields/RoundedCheckbox';
 
 const useStyles = makeStyles((theme) => ({

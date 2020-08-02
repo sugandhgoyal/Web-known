@@ -12,9 +12,6 @@ const useStyles = makeStyles((theme) => ({
     height: '60px',
     objectFit: 'cover',
     padding: '0 0 0 30%',
-    [theme.breakpoints.up('600')]: {
-      display: 'none',
-    },
   },
   menuHeader: {
     display: 'flex',
@@ -25,23 +22,20 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     width: '100%',
     position: 'fixed',
-    zIndex: '1',
+    zIndex: '2',
     top: '0',
     left: '0',
     background: '#36415A',
     overflowX: 'hidden',
     transition: '0.5s',
     paddingTop: '60px',
-    textAlign: 'center',
-    [theme.breakpoints.up('600')]: {
-      display: 'none',
-    },
+    textAlign: 'left',
+    '& a': {
+      fontSize: '17px',
+    }
   },
   menuButton: {
-    fontSize: '25px',
-    [theme.breakpoints.up('600')]: {
-      display: 'none',
-    },
+    fontSize: '28px',
   },
   link: {
     padding: '8px 8px 8px 32px',
@@ -50,17 +44,15 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     display: 'block',
     transition: '0.3s',
-    [theme.breakpoints.up('600')]: {
-      display: 'none',
-    },
     '& hover': {
       color: '#f1f1f1',
     },
   },
   closebtn: {
     position: 'absolute',
-    top: '0',
-    right: '25px',
+    top: '4px',
+    right: '21px',
+    color: 'white',
     fontSize: '36px',
     marginLeft: '50px',
   }

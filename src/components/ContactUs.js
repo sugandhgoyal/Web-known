@@ -80,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
         background: `${theme.palette.secondary.main}`,
         height: '340px',
         width: '300px',
+        [theme.breakpoints.down('600')]: {
+            width: '90%',
+        }
     },
     cardTitle: {
         color: 'white',
