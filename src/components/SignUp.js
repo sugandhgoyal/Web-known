@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('600')]: {
             width: '90%',
         }
+    },
+    label: {
+        backgroundColor: "white"
     }
 }));
 
@@ -52,11 +55,23 @@ export const SignUp = () => {
         <Container className={`${classes.wrapper}`} maxWidth="lg">
             <h2 className={`${classes.heading} fade-in`}>Don’t Forget To Check Your Website Score. It’s Free!</h2>
             <TextField
+                InputLabelProps={{
+                    classes: {
+                        root: classes.label
+                    }
+                }}
+                key="Name"
                 className={`${classes.textfield} fade-in`}
                 id="outlined-basic"
                 label="Name"
                 variant="outlined" />
             <TextField
+                InputLabelProps={{
+                    classes: {
+                        root: classes.label
+                    }
+                }}
+                key="Email"
                 className={`${classes.textfield} fade-in`}
                 id="outlined-basic"
                 label="Email"
