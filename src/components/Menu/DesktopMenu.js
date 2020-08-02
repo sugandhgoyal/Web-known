@@ -5,6 +5,11 @@ import { Grid, Link, Button } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     container: {
         display: 'flex',
+        position: 'fixed',
+        left: '0',
+        top: '0',
+        zIndex: '12',
+        background: 'white',
         [theme.breakpoints.down('600')]: {
             display: 'none',
         },
@@ -20,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 2
     },
     gridItem: {
-        padding: '20px 0',
+        padding: '15px 0',
     },
     link: {
         fontSize: '16px',

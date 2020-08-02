@@ -10,6 +10,8 @@ import ContactUs from './ContactUs';
 import './theme/animation.css';
 import IntroPage from './IntroPage';
 import HamburgerMenu from './Menu/HamburgerMenu';
+import { makeStyles } from '@material-ui/core/styles';
+import { classes } from 'istanbul-lib-coverage';
 
 export const HorizontalLine = styled.div`
     height: 1px;
@@ -17,7 +19,15 @@ export const HorizontalLine = styled.div`
     background: #dedbdb;
 `;
 
+const useStyles = makeStyles((theme) => ({
+  wrapper: {
+    marginTop: '102px'
+  }
+}));
+
 export const LandingPage = () => {
+  const classes = useStyles();
+
   useEffect(() => {
     const faders = document.querySelectorAll(".fade-in");
     const sliders = document.querySelectorAll(".slide-in");
@@ -54,17 +64,19 @@ export const LandingPage = () => {
   return (
     <>
       <Menu />
-      <HamburgerMenu />
-      <IntroPage />
-      <SignUp />
-      <Services />
-      <HorizontalLine />
-      <WorkingProcess />
-      <HorizontalLine />
-      <HowWeDoIt />
-      <HorizontalLine />
-      <Blog />
-      <ContactUs />
+      <div className={classes.wrapper}>
+        <HamburgerMenu />
+        <IntroPage />
+        <SignUp />
+        <Services />
+        <HorizontalLine />
+        <WorkingProcess />
+        <HorizontalLine />
+        <HowWeDoIt />
+        <HorizontalLine />
+        <Blog />
+        <ContactUs />
+      </div>
     </>
   )
 }
