@@ -9,14 +9,14 @@
   
   .from-left {
     grid-column: 2 / 3;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translate3d(-200px, 0, 0);
+    transform: translate3d(-200px, 0, 0);
   }
   
   .from-right {
     grid-column: 3 / 4;
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -webkit-transform: translate3d(200px, 0, 0);
+    transform: translate3d(200px, 0, 0);
   }
   
   .from-left,

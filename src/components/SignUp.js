@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('600')]: {
             margin: '50px 0',
             padding: '50px 15px',
+            background: theme.palette.primary.main
         }
     },
     heading: {
@@ -26,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
         margin: '30px auto',
         [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
-            margin: '0'
+            margin: '0 auto',
+            width: '100%',
         }
     },
     textfield: {
@@ -57,12 +59,18 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         animation: `8s $spin linear infinite`,
         zIndex: '1',
+        [theme.breakpoints.down('600')]: {
+            display: 'none'
+        }
     },
     cross: {
         right: '5%',
         position: 'absolute',
         animation: `8s $spin linear infinite`,
         zIndex: '1',
+        [theme.breakpoints.down('600')]: {
+            display: 'none'
+        }
     },
     triangle: {
         top: '12%',
@@ -70,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         animation: `8s $spin linear infinite`,
         zIndex: '1',
+        [theme.breakpoints.down('600')]: {
+            display: 'none'
+        }
     },
     '@keyframes spin': {
         "100%":

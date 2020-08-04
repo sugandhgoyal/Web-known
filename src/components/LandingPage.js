@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Menu from './Menu/DesktopMenu';
 import SignUp from './SignUp';
 import Services from './Services';
@@ -11,7 +11,6 @@ import './theme/animation.css';
 import IntroPage from './IntroPage';
 import HamburgerMenu from './Menu/HamburgerMenu';
 import { makeStyles } from '@material-ui/core/styles';
-import { classes } from 'istanbul-lib-coverage';
 
 export const HorizontalLine = styled.div`
     height: 1px;
@@ -21,8 +20,12 @@ export const HorizontalLine = styled.div`
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    marginTop: '102px'
+    marginTop: '102px',
+    [theme.breakpoints.down('600')]: {
+      marginTop: '0',
+    }
   }
+
 }));
 
 export const LandingPage = () => {
