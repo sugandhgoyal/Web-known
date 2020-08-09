@@ -136,7 +136,7 @@ export const ContactUs = () => {
                 <Container className={classes.bottomPart2} maxWidth="lg">
                     <h3>Quick Links</h3>
                     <List component="nav" aria-label="main">
-                        <ListItemLink href="#home">
+                        <ListItemLink href="#">
                             <ListItemText primary="Home" />
                         </ListItemLink>
                         <ListItem href="#services">

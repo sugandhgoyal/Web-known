@@ -58,7 +58,7 @@ export const IntroPage = () => {
 
   return (
     <div>
-      <Grid container className={classes.wrapper} id="#home">
+      <Grid container className={classes.wrapper}>
         <Grid item lg={6} xs={12}>
           <Chip avatar={<Avatar variant="rounded" className={classes.avatar}>Email</Avatar>} label="email@webknown.com" />
           <Container className={classes.container}>
