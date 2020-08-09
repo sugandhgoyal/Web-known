@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
     },
     img: {
-        width: '66px',
+        width: '76px',
         objectFit: 'contain',
         [theme.breakpoints.down('600')]: {
             width: '40px',
@@ -90,7 +90,7 @@ export const Services = () => {
     return (
         <Container className={classes.wrapper} maxWidth="lg" id="services">
             <h2 className={classes.heading}>High-End Services For Digital Business</h2>
-            <p>The same way I wouldn’t book in Rome without using certainly would run.</p>
+            <p>Wherever you are on your journey, we can help you get to the next stage with speed and ease.</p>
             <Grid container className={classes.cardcontainer}>
                 <Grid item lg={3} sm={6} xs={6}>
                     <Card className={`${classes.root} fade-in`} lg={3}>
@@ -99,7 +99,7 @@ export const Services = () => {
                         </Container>
                         <CardContent className={classes.contentContainer}>
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
-                                Keyword & Market Research</Typography>
+                                Website Design/Development</Typography>
                             <Typography className={classes.content} color="textSecondary" component="h2">
                                 Lock in and no minimum terms. Cash out to your account anytime.</Typography>
                         </CardContent>
@@ -112,7 +112,7 @@ export const Services = () => {
                         </Container>
                         <CardContent className={classes.contentContainer}>
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
-                                UX & Product Design</Typography>
+                                Social Media Management</Typography>
                             <Typography className={classes.content} color="textSecondary" component="h2">
                                 Lock in and no minimum terms. Cash out to your account anytime.</Typography>
                         </CardContent>
@@ -125,7 +125,7 @@ export const Services = () => {
                         </Container>
                         <CardContent className={classes.contentContainer}>
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
-                                Digital Marketing</Typography>
+                                Lead Generation</Typography>
                             <Typography className={classes.content} color="textSecondary" component="div">Lock in and no minimum terms. Cash out to your account anytime.
                             </Typography>
                         </CardContent>

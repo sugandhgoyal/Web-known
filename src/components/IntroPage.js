@@ -62,8 +62,8 @@ export const IntroPage = () => {
         <Grid item lg={6} xs={12}>
           <Chip avatar={<Avatar variant="rounded" className={classes.avatar}>Email</Avatar>} label="email@webknown.com" />
           <Container className={classes.container}>
-            <h1 className={classes.leftHeading}>How Much Traffic Should You Actually Be Getting!</h1>
-            <p>Gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole that covered the whole</p>
+            <h1 className={classes.leftHeading}>You want to change the world. We want to help you do it.</h1>
+            <p>We help ---------- build their brand, improve their marketing and scale their impact.</p>
             <Button className={classes.button}>Contact Today</Button>
           </Container>
         </Grid>

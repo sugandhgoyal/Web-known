@@ -47,7 +47,7 @@ export const Menu = () => {
             </Grid>
             <Grid item lg={6} className={classes.gridItem}>
                 <ul className={classes.linkslist}>
-                    <Link className={classes.link} href="/#home">
+                    <Link className={classes.link} href="/">
                         Home</Link>
                     <Link className={classes.link} href="#services">
                         Services</Link>

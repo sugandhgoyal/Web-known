@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     wrapper: {
         background: `url(${process.env.PUBLIC_URL}/assets/background.jpg)`,
-        padding: '120px 0',
+        padding: '100px 0',
         margin: '90px 0',
         textAlign: 'center',
         maxWidth: '100%',
