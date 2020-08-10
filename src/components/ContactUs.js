@@ -14,10 +14,12 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        padding: '90px 160px',
+        padding: '0 160px',
         textAlign: 'center',
         maxWidth: '100%',
-        background: '#2b3e65',
+        background: `url(${process.env.PUBLIC_URL}/assets/footer_background.jpg)`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         [theme.breakpoints.down('600')]: {
             padding: '50px 15px',
         }
@@ -25,13 +27,16 @@ const useStyles = makeStyles((theme) => ({
     top: {
         color: 'white',
         display: 'flex',
-        padding: '0 0 50px 0',
+        padding: '40px 0',
         justifyContent: 'space-between',
     },
     title: {
         fontWeight: '400',
         fontSize: '30px',
         color: '#ffffff',
+        margin: '0',
+        width: '30%',
+        textAlign: 'left',
         [theme.breakpoints.down('600')]: {
             fontSize: '26px',
         }
@@ -78,8 +83,8 @@ const useStyles = makeStyles((theme) => ({
     },
     root: {
         background: `${theme.palette.secondary.main}`,
-        height: '340px',
-        width: '300px',
+        height: '310px',
+        width: '290px',
         [theme.breakpoints.down('600')]: {
             width: '90%',
         }
