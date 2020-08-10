@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
       '& p': {
         lineHeight: '27px',
         color: '#36415A',
+        minHeight: '82px',
       }
     },
   },

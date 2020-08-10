@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         [theme.breakpoints.down('600')]: {
-            padding: '50px 15px',
+            padding: '50px 15px 0 15px',
+            background: '#323f57'
         }
     },
     top: {
@@ -29,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         padding: '40px 0',
         justifyContent: 'space-between',
+        [theme.breakpoints.down('600')]: {
+            padding: '0 0 30px 0',
+        }
     },
     title: {
         fontWeight: '400',
@@ -38,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
         width: '30%',
         textAlign: 'left',
         [theme.breakpoints.down('600')]: {
-            fontSize: '26px',
+            fontSize: '22px',
+            width: '70%',
         }
     },
     bottom: {
@@ -48,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '50px 0',
         [theme.breakpoints.down('600')]: {
             flexDirection: 'column',
+            padding: '30px 0',
         }
 
     },
@@ -86,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
         height: '310px',
         width: '290px',
         [theme.breakpoints.down('600')]: {
-            width: '90%',
+            width: '100%',
         }
     },
     cardTitle: {
@@ -102,6 +108,15 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         '::placeholderr': {
             color: 'white',
+        }
+    },
+    list: {
+        [theme.breakpoints.down('600')]: {
+            padding: '0',
+            margin: '0 0 30px 0',
+            '& a': {
+                padding: '0 10px',
+            }
         }
     }
 }));
@@ -140,7 +155,7 @@ export const ContactUs = () => {
                 </Container>
                 <Container className={classes.bottomPart2} maxWidth="lg">
                     <h3>Quick Links</h3>
-                    <List component="nav" aria-label="main">
+                    <List component="nav" aria-label="main" className={classes.list}>
                         <ListItemLink href="#">
                             <ListItemText primary="Home" />
                         </ListItemLink>

@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: `'Work Sans', sans-serif`,
         [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
+            marginTop: '0',
         }
     },
     subHeading: {
@@ -36,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '16px',
         width: '40%',
         margin: '25px auto',
+        [theme.breakpoints.down('600')]: {
+            width: '100%',
+        }
     },
     imgContainer: {
         minHeight: '80px',

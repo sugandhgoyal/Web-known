@@ -9,14 +9,21 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         maxWidth: '100%',
         [theme.breakpoints.down('600')]: {
-            padding: '50px 15px',
+            padding: '50px 15px !important',
         }
     },
-    img: {
+    img1: {
         width: '500px',
         objectFit: 'contain',
         [theme.breakpoints.down('600')]: {
             width: '300px',
+        },
+    },
+    img2: {
+        width: '500px',
+        objectFit: 'contain',
+        [theme.breakpoints.down('600')]: {
+            display: 'none'
         },
     },
     rightPart: {
@@ -82,12 +89,12 @@ export const HowWeDoIt = () => {
                     </div> */}
                 </Grid>
                 <Grid item lg={6} xs={12}>
-                    <img className={`${classes.img} slide-in from-right`} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
+                    <img className={`${classes.img1} slide-in from-right`} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
                 </Grid>
             </Grid>
             <Grid container>
                 <Grid item lg={6} xs={12}>
-                    <img className={`${classes.img} slide-in from-left`} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
+                    <img className={`${classes.img2} slide-in from-left`} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
                 </Grid>
                 <Grid item lg={6} xs={12} className={`${classes.rightPart} slide-in from-left`}>
                     <h1 className={classes.title}>Let’s face it… <br /> We live in interesting times.</h1>

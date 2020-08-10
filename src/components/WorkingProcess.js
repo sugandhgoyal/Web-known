@@ -6,13 +6,19 @@ import RoundedCheckbox from './Fields/RoundedCheckbox';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        padding: '50px 15px',
+        padding: '50px 160px',
         textAlign: 'center',
         maxWidth: '100%',
         background: '#EFF0F1',
+        [theme.breakpoints.down('600')]: {
+            padding: '50px 15px',
+        }
+    },
+    dataContainer: {
+        justifyContent: 'space-between',
     },
     img: {
-        width: '500px',
+        width: '100%',
         objectFit: 'contain',
         [theme.breakpoints.down('600')]: {
             display: 'none'
@@ -85,11 +91,11 @@ export const WorkingProcess = () => {
 
     return (
         <Container className={classes.wrapper} maxWidth="lg" id="process">
-            <Grid container>
-                <Grid item lg={6} xs={6} className={`${classes.leftPart}`}>
+            <Grid container className={classes.dataContainer}>
+                <Grid item lg={5} xs={6} className={`${classes.leftPart}`}>
                     <img className={`${classes.img} slide-in from-left`} src={`${process.env.PUBLIC_URL}/assets/graph.png`} />
                 </Grid>
-                <Grid item lg={6} xs={12} className={`${classes.rightPart} slide-in from-left`}>
+                <Grid item lg={5} xs={12} className={`${classes.rightPart} slide-in from-left`}>
                     <div className={classes.chip}>Our working process</div>
                     <h1 className={classes.title}> With the right support, you really can change the world!</h1>
                     <p className={classes.subtitle}>We believe that any enterprising individual has the ability to change the world. But we also recognise that changing the world by yourself is hard. Really hard!</p>

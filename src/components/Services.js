@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '16px',
         width: '40%',
         margin: '25px auto',
+        [theme.breakpoints.down('600')]: {
+            width: '100%',
+        }
     },
     heading: {
         fontSize: '34px !important',
@@ -28,7 +31,9 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
         [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
-            margin: '0'
+            margin: '0',
+            width: '100%',
+
         }
     },
     imgContainer: {
@@ -44,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     root: {
-        margin: '20px',
+        // margin: '20px',
         height: '300px',
         width: '250px',
         transform: 'translateY(0)',
@@ -78,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cardcontainer: {
-        'justifyContent': 'space-evenly',
+        justifyContent: 'space-between',
         'padding': '0 160px',
         [theme.breakpoints.down('600')]: {
             'padding': '0',
