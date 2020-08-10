@@ -27,26 +27,31 @@ export const theme = createMuiTheme({
       rounded: {
         borderRadius: '24px',
         width: '44px !important',
+        height: '27px !important',
         padding: '3px',
         color: 'white !important',
-        fontWeight: '700',
+        fontWeight: '600',
         background: '#15d895',
-        fontSize: '15px'
+        fontSize: '15px !important',
+        padding: '2px 10px',
+        margin: '0 5px 0 0 !important',
+        fontFamily: `'Work Sans', sans-serif`,
+        lineHeight: '27px',
       }
     },
     MuiChip: {
       root: {
-        paddingRight: '5px !important',
+        padding: '6px !important',
         height: '41px',
-        padding: '3px',
         borderRadius: '50px'
       },
       label: {
         color: '#36415A',
-        fontWeight: '500',
+        fontWeight: '400',
         borderRadius: '24px',
-        padding: '7px',
-        fontSize: '15px !important'
+        padding: '0 !important',
+        fontSize: '15px !important',
+        fontFamily: `'Work Sans', sans-serif`,
       }
     }
   },

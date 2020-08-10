@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '700',
         width: '50%',
         margin: '30px auto',
+        fontFamily: `'Work Sans', sans-serif`,
         [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
             margin: '0 auto',
@@ -37,6 +38,13 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '5px',
         border: '1px solid white',
         border: 'none',
+        fontFamily: `'Work Sans', sans-serif`,
+        '& input': {
+            padding: '18.5px 17px',
+        },
+        '& label': {
+            color: "#747474",
+        },
         [theme.breakpoints.down('600')]: {
             width: '90%',
         }
@@ -44,8 +52,10 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         color: 'white',
         margin: '10px',
-        padding: '15px 63px',
+        padding: '15px 59px',
         fontWeight: '600',
+        fontSize: '16px',
+        fontFamily: `'Work Sans', sans-serif`,
         [theme.breakpoints.down('600')]: {
             width: '90%',
         }
