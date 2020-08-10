@@ -24,9 +24,18 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '34px !important',
         lineHeight: '40px !important',
         fontWeight: '700',
+        color: theme.palette.text.primary,
+        fontFamily: `'Work Sans', sans-serif`,
         [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
         }
+    },
+    subHeading: {
+        lineHeight: '27px',
+        color: '#36415A',
+        fontSize: '16px',
+        width: '40%',
+        margin: '25px auto',
     },
     imgContainer: {
         minHeight: '80px',
@@ -87,7 +96,7 @@ export const Blog = () => {
     return (
         <Container className={classes.wrapper} maxWidth="lg" id="blog">
             <h2 className={classes.heading}>Our Latest Article</h2>
-            <p>The same way I wouldn’t book an apartment in Rome without using certainly would run.</p>
+            <p className={classes.subHeading}>The same way I wouldn’t book an apartment in Rome without using certainly would run.</p>
             <Grid container className={classes.cardcontainer}>
                 <Grid item lg={4} sm={6} xs={12}>
                     <Card className={`${classes.root} fade-in`}>

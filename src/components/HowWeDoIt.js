@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: '700',
         textTransform: 'capitalize',
         color: '#36415A',
-        fontFamily: '"Work Sans", sans-serif',
+        fontFamily: `'Work Sans', sans-serif`,
         [theme.breakpoints.down('600')]: {
             fontSize: '26px',
         }
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '23px',
         fontWeight: '400',
         color: '#36415A',
-        fontFamily: '"Work Sans", sans-serif',
+        fontFamily: `'Work Sans', sans-serif`,
         marginTop: '0',
     },
 }));
@@ -56,9 +56,9 @@ export const HowWeDoIt = () => {
         <Container className={classes.wrapper} maxWidth="lg">
             <Grid container>
                 <Grid item lg={6} xs={12} className={`${classes.rightPart} slide-in from-right`}>
-                    <h1 className={classes.title}>Watch As Your Business Grows With Us</h1>
-                    <p className={classes.subtitle}>Web known stays ahead of the curve with digital marketing trends. Our success has us leading ability and innovation.</p>
-                    <div className={classes.demo}>
+                    <h1 className={classes.title}>The world needs people like you. And you need people like us.</h1>
+                    <p className={classes.subtitle}>We believe that any enterprising individual has the ability to change the world. But we also recognise that changing the world by yourself is hard. Really hard. That’s why we exist!</p>
+                    {/* <div className={classes.demo}>
                         <List>
                             <ListItem>
                                 <ListItemIcon>
@@ -79,10 +79,43 @@ export const HowWeDoIt = () => {
                                 />
                             </ListItem>
                         </List>
-                    </div>
+                    </div> */}
                 </Grid>
                 <Grid item lg={6} xs={12}>
                     <img className={`${classes.img} slide-in from-right`} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
+                </Grid>
+            </Grid>
+            <Grid container>
+                <Grid item lg={6} xs={12}>
+                    <img className={`${classes.img} slide-in from-left`} src={`${process.env.PUBLIC_URL}/assets/advertise.png`} />
+                </Grid>
+                <Grid item lg={6} xs={12} className={`${classes.rightPart} slide-in from-left`}>
+                    <h1 className={classes.title}>Let’s face it… <br /> We live in interesting times.</h1>
+                    <p className={classes.subtitle}>Whether we are experiencing it in real life, or through our media feeds – change and conflict have become an everyday part of life. It might feel like it’s all doom and gloom. But on the flip side, where once we might have waited for our leaders to save the day, people across the globe are stepping up to lead the change they want to see in the world.</p>
+                    <p className={classes.subtitle}>We equip those who want to make a difference, with the strategy, systems & support they need to make an even bigger difference.</p>
+
+                    {/* <div className={classes.demo}>
+                        <List>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <RoundedCheckbox />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary="Targeted adverting"
+                                    secondary="Web-known stays ahead of the curve with digital marketing trends. Our success has us leading the pack amongst."
+                                />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <RoundedCheckbox />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary="In-depth analytics"
+                                    secondary="Web-known stays ahead of the curverese from digital marketing trends"
+                                />
+                            </ListItem>
+                        </List>
+                    </div> */}
                 </Grid>
             </Grid>
         </Container>

@@ -95,7 +95,6 @@ export const WorkingProcess = () => {
                     <p className={classes.subtitle}>We believe that any enterprising individual has the ability to change the world. But we also recognise that changing the world by yourself is hard. Really hard!</p>
                     <h3 className={classes.bold}>When you’re the founder, the fundraiser, the marketer and the project manager it can be difficult to make the kind of impact you dream of.</h3>
                     <div className={classes.subtitle}>The good news is, you don’t have to do it all by yourself. We exist to ensure good ideas and good causes gain the support they need to make a bigger difference.</div>
-
                     {/* <div className={classes.demo}>
                         <List>
                             <ListItem>

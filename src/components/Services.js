@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     content: {
         fontSize: '16px',
         lineHeight: '27px',
-        fontFamily: '"Work Sans", sans-serif',
+        fontFamily: `'Work Sans', sans-serif`,
         fontWeight: '500',
         [theme.breakpoints.down('600')]: {
             fontSize: '12px',
