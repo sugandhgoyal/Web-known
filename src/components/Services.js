@@ -8,19 +8,24 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '90px',
         textAlign: 'center',
         maxWidth: '100%',
-        '& p': {
-            lineHeight: '27px',
-            color: '#36415A',
-            fontSize: '16px'
-        },
         [theme.breakpoints.down('600')]: {
             padding: '0 15px 50px 15px;',
         }
+    },
+    subHeading: {
+        lineHeight: '27px',
+        color: '#36415A',
+        fontSize: '16px',
+        width: '40%',
+        margin: '25px auto',
     },
     heading: {
         fontSize: '34px !important',
         lineHeight: '40px !important',
         fontWeight: '700',
+        width: '30%',
+        margin: '0 auto',
+        color: theme.palette.text.primary,
         [theme.breakpoints.down('600')]: {
             fontSize: '26px !important',
             margin: '0'
@@ -90,7 +95,7 @@ export const Services = () => {
     return (
         <Container className={classes.wrapper} maxWidth="lg" id="services">
             <h2 className={classes.heading}>High-End Services For Digital Business</h2>
-            <p>Wherever you are on your journey, we can help you get to the next stage with speed and ease.</p>
+            <p className={classes.subHeading} >Wherever you are on your journey, we can help you get to the next stage with speed and ease.</p>
             <Grid container className={classes.cardcontainer}>
                 <Grid item lg={3} sm={6} xs={6}>
                     <Card className={`${classes.root} fade-in`} lg={3}>

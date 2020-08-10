@@ -30,15 +30,36 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'flex-start',
     },
+    chip: {
+        color: '#fff',
+        backgroundColor: '#047dff',
+        padding: '3px 10px',
+        fontSize: '15px',
+        fontWeight: '600',
+        borderRadius: '50px',
+        display: 'flex',
+        alignItems: 'center',
+        lineHeight: '23px'
+    },
     title: {
         textAlign: 'left',
         fontSize: '30px',
-        fontWeight: '700',
+        fontWeight: '600',
         textTransform: 'capitalize',
-        color: '#36415A',
-        fontFamily: '"Work Sans", sans-serif',
+        color: theme.palette.text.primary,
+        fontFamily: `'Work Sans', sans-serif`,
         [theme.breakpoints.down('600')]: {
             fontSize: '26px',
+        }
+    },
+    bold: {
+        textAlign: 'left',
+        fontSize: '24px',
+        fontWeight: '600',
+        color: theme.palette.text.primary,
+        fontFamily: `'Work Sans', sans-serif`,
+        [theme.breakpoints.down('600')]: {
+            fontSize: '23px',
         }
     },
     subtitle: {
@@ -47,8 +68,8 @@ const useStyles = makeStyles((theme) => ({
         wordSpacing: '3px',
         lineHeight: '23px',
         fontWeight: '400',
-        color: '#36415A',
-        fontFamily: '"Work Sans", sans-serif',
+        color: theme.palette.text.primary,
+        fontFamily: `'Work Sans', sans-serif`,
         marginTop: '0',
         [theme.breakpoints.down('600')]: {
             '& p': {
@@ -69,17 +90,20 @@ export const WorkingProcess = () => {
                     <img className={`${classes.img} slide-in from-left`} src={`${process.env.PUBLIC_URL}/assets/graph.png`} />
                 </Grid>
                 <Grid item lg={6} xs={12} className={`${classes.rightPart} slide-in from-left`}>
-                    <Chip label="Our working process" color="primary" />
-                    <h1 className={classes.title}> Your Site’s Organic SEO Rankings Have A Definitive Effect On Your Business’s Bottom Line</h1>
-                    <p className={classes.subtitle}>We stay ahead of the curve with digital marketing trends. Our success has us leading the pack amongst our competitors with our ability to anticipate change and innovation</p>
-                    <div className={classes.demo}>
+                    <div className={classes.chip}>Our working process</div>
+                    <h1 className={classes.title}> With the right support, you really can change the world!</h1>
+                    <p className={classes.subtitle}>We believe that any enterprising individual has the ability to change the world. But we also recognise that changing the world by yourself is hard. Really hard!</p>
+                    <h3 className={classes.bold}>When you’re the founder, the fundraiser, the marketer and the project manager it can be difficult to make the kind of impact you dream of.</h3>
+                    <div className={classes.subtitle}>The good news is, you don’t have to do it all by yourself. We exist to ensure good ideas and good causes gain the support they need to make a bigger difference.</div>
+
+                    {/* <div className={classes.demo}>
                         <List>
                             <ListItem>
                                 <ListItemIcon>
                                     <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
-                                    primary="Targeted adverting"
+                                    primary="When you’re the founder, the fundraiser, the marketer and the project manager it can be difficult to make the kind of impact you dream of."
                                 />
                             </ListItem>
                             <ListItem>
@@ -87,27 +111,11 @@ export const WorkingProcess = () => {
                                     <RoundedCheckbox />
                                 </ListItemIcon>
                                 <ListItemText
-                                    primary="In-depth analytics"
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <RoundedCheckbox />
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary="Social media optimization"
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <RoundedCheckbox />
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary="SEO (Search Engine Optimization)"
+                                    primary="The good news is, you don’t have to do it all by yourself. We exist to ensure good ideas and good causes gain the support they need to make a bigger difference."
                                 />
                             </ListItem>
                         </List>
-                    </div>
+                    </div> */}
                 </Grid>
             </Grid>
         </Container>
