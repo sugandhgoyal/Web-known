@@ -45,10 +45,8 @@ export const Menu = () => {
   }, [])
 
   const handleScroll = () => {
-    console.log("window.pageYOffset", window.pageYOffset)
     let getHeader = window.document.getElementsByClassName('header');
     if (window.pageYOffset > 0) {
-      console.log("getHeader", getHeader)
       if (getHeader && getHeader[0])
         getHeader[0].style.background = 'white';
     }

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Typography, Card, Grid, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
+import firebase from '../services/firebase';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
@@ -96,6 +97,15 @@ const useStyles = makeStyles((theme) => ({
 
 export const Blog = () => {
     const classes = useStyles();
+
+    useEffect(() => {
+        const colorRef = firebase.database().ref('values');
+        // console.log("colorRef", colorRef);
+        colorRef.once('value', (snapshot) => {
+            let colors = snapshot.val();
+            console.log("colors", colors)
+        })
+    }, []);
 
     return (
         <Container className={classes.wrapper} maxWidth="lg" id="blog">
