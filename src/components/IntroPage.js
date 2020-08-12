@@ -2,8 +2,8 @@ import React, { Component, useEffect } from 'react';
 import { Chip, Avatar, Container, Grid, Button, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ReactJsTyping from 'reactjs-typing-effect';
-import { Widget, addResponseMessage } from 'react-chat-widget';
-import 'react-chat-widget/lib/styles.css';
+// import { Widget, addResponseMessage } from 'react-chat-widget';
+// import 'react-chat-widget/lib/styles.css';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -13,10 +13,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   headerImage: {
-    height: '170px',
     objectFit: 'cover',
     width: '100%',
     zIndex: '-1',
+    marginBottom: '30px',
+    [theme.breakpoints.down('600')]: {
+      display: 'none'
+    },
   },
   container: {
     '& p': {
@@ -106,17 +109,20 @@ export const IntroPage = () => {
 
   const listOfString = ['customers', 'companies', 'organizations', 'brands', 'people'];
 
-  useEffect(() => {
-    addResponseMessage('Welcome to this awesome chat!');
-    addResponseMessage('Hello!');
-    addResponseMessage('What can I help you with?!');
-  }, []);
+  // useEffect(() => {
+  //   addResponseMessage('Welcome to this awesome chat!');
+  //   addResponseMessage('Hello!');
+  //   addResponseMessage('What can I help you with?!');
+  // }, []);
 
-  const handleNewUserMessage = (newMessage) => {
-    console.log(`New message incoming! ${newMessage}`);
-    // Now send the message throught the backend API
-  };
+  // const handleNewUserMessage = (newMessage) => {
+  //   console.log(`New message incoming! ${newMessage}`);
+  //   // Now send the message throught the backend API
+  // };
 
+  const openModal = () => {
+
+  }
 
   return (
     <div>
@@ -133,7 +139,7 @@ export const IntroPage = () => {
             <div className={classes.toolbar}>
               <Button className={classes.button}><Link href="#services">
                 Know More</Link></Button>
-              <span className={classes.playIconContainer} onClick={}>
+              <span className={classes.playIconContainer} onClick={() => openModal()}>
                 <img className={classes.playIcon} src={`${process.env.PUBLIC_URL}/assets/play_arrow.svg`} />
               </span>
               <div>Intro Video</div>
