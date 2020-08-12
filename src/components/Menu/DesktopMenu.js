@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     left: '0',
     top: '0',
     zIndex: '12',
-    background: 'none',
+    background: 'transparent',
     [theme.breakpoints.down('600')]: {
       display: 'none',
     },
@@ -51,7 +51,7 @@ export const Menu = () => {
         getHeader[0].style.background = 'white';
     }
     else if (window.pageYOffset === 0)
-      getHeader[0].style.background = 'none';
+      getHeader[0].style.background = 'transparent';
   }
 
   return (
@@ -71,7 +71,7 @@ export const Menu = () => {
             Contact Us</Link>
         </ul>
       </Grid >
-      <Grid item lg={2} className={classes.gridItem}><Button className={classes.button} variant="outlined">Let's chat</Button></Grid>
+      {/* <Grid item lg={2} className={classes.gridItem}><Button className={classes.button} variant="outlined">Let's chat</Button></Grid> */}
     </Grid>
   )
 }

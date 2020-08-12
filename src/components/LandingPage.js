@@ -20,7 +20,7 @@ export const HorizontalLine = styled.div`
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    marginTop: '102px',
+    // marginTop: '102px',
     [theme.breakpoints.down('600')]: {
       marginTop: '0',
     }

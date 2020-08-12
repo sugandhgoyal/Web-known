@@ -178,7 +178,7 @@ export const ContactUs = () => {
                             <Typography variant="h5" component="h2">
                                 EMAIL:</Typography>
                             <Typography className={classes.pos} color="textSecondary">
-                                email@webknown.com</Typography>
+                                info@webknown.co</Typography>
                         </CardContent>
                     </Card>
                 </Container>
