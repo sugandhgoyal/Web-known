@@ -41,13 +41,14 @@ export const theme = createMuiTheme({
     },
     MuiChip: {
       root: {
-        padding: '6px !important',
+        marginLeft: '30px',
+        padding: '6px 20px 6px 6px!important',
         height: '41px',
         borderRadius: '50px'
       },
       label: {
         color: '#36415A',
-        fontWeight: '400',
+        fontWeight: '500',
         borderRadius: '24px',
         padding: '0 !important',
         fontSize: '15px !important',

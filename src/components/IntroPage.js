@@ -7,7 +7,7 @@ import ReactJsTyping from 'reactjs-typing-effect';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    padding: '0 8% 1% 8%',
+    padding: '0 9% 1% 9%',
     [theme.breakpoints.down('600')]: {
       padding: '15px',
     },
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'cover',
     width: '100%',
     zIndex: '-1',
-    marginBottom: '30px',
+    marginBottom: '70px',
     [theme.breakpoints.down('600')]: {
       display: 'none'
     },
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     '& p': {
       lineHeight: '27px',
       color: '#36415A',
+      fontSize: '20px'
     },
     [theme.breakpoints.down('600')]: {
       padding: '0',
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   leftHeading: {
     color: '#36415a',
-    fontSize: '48px',
+    fontSize: '56px',
     fontWeight: '700',
     lineHeight: '55px',
     margin: '20px 0',
@@ -49,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     objectFit: 'contain',
     width: '100%',
+    height: '500px',
     [theme.breakpoints.down('600')]: {
       display: 'none'
     }
@@ -76,8 +78,8 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     display: 'flex',
-    width: '58%',
-    justifyContent: 'space-around',
+    width: '65%',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
   playIcon: {
@@ -132,10 +134,15 @@ export const IntroPage = () => {
           {/* <Widget
             handleNewUserMessage={handleNewUserMessage}
           /> */}
-          <Chip avatar={<Avatar variant="rounded" className={classes.avatar}>Email</Avatar>} label="info@webknown.co" />
+          <Chip
+            avatar={<Avatar variant="rounded"
+              className={classes.avatar}>Email</Avatar>}
+            label="info@webknown.co"
+            onClick={() => { window.location.href = "mailto:info@webknown.co?subject=Subject"; }}
+          />
           <Container className={classes.container}>
             <h1 className={classes.leftHeading}>You want to change the world. We want to help you do it.</h1>
-            <p>We help <div className={classes.animation} ><ReactJsTyping StringList={listOfString} speed={500} /></div>build their brand, improve their marketing and scale their impact.</p>
+            <p>We help <div className={classes.animation} ><ReactJsTyping StringList={listOfString} speed={500} /></div>build their brand, <br />improve their marketing and scale their impact.</p>
             <div className={classes.toolbar}>
               <Button className={classes.button}><Link href="#services">
                 Know More</Link></Button>
