@@ -16,7 +16,13 @@ const useStyles = makeStyles((theme) => ({
             margin: '50px 0',
             padding: '50px 15px',
             background: theme.palette.primary.main
-        }
+        },
+        '& p': {
+            lineHeight: '27px',
+            color: 'white',
+            fontSize: '16px',
+            fontFamily: `'Work Sans', sans-serif`,
+        },
     },
     heading: {
         color: '#ffffff',
@@ -33,17 +39,20 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     textfield: {
-        margin: '10px',
+        marginRight: '10px',
+        padding: '21px 40px',
         background: 'white',
         borderRadius: '5px',
         border: '1px solid white',
         border: 'none',
         fontFamily: `'Work Sans', sans-serif`,
-        '& input': {
-            padding: '18.5px 17px',
+        '&:focus': {
+            outline: 'none',
         },
-        '& label': {
-            color: "#747474",
+        '&::placeholder': {
+            color: 'grey',
+            fontSize: '16px',
+            fontWeight: '500'
         },
         [theme.breakpoints.down('600')]: {
             width: '90%',
@@ -92,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
             display: 'none'
         }
     },
-    '@keyframes spin': {
+    '@placeholderframes spin': {
         "100%":
         {
             transform: 'rotate(360deg)',
@@ -106,29 +115,22 @@ export const SignUp = () => {
     return (
         <Container className={`${classes.wrapper}`} maxWidth="lg">
             <img className={classes.circle} src={`${process.env.PUBLIC_URL}/assets/circle.png`} />
-            <h2 className={`${classes.heading} fade-in`}>Don’t Forget To Check Your Website Score. It’s Free!</h2>
-            <TextField
-                InputLabelProps={{
-                    classes: {
-                        root: classes.label
-                    }
-                }}
-                key="Name"
+            <h2 className={`${classes.heading} fade-in`}>Resources and advice to get you started</h2>
+            <p>Sign Up to receive weekly tips for creating a successful online presence!</p>
+            <input
+                placeholder="Name"
                 className={`${classes.textfield} fade-in`}
                 id="outlined-basic"
                 label="Name"
-                variant="outlined" />
-            <TextField
-                InputLabelProps={{
-                    classes: {
-                        root: classes.label
-                    }
-                }}
-                key="Email"
+
+            />
+            <input
+                placeholder="Email"
                 className={`${classes.textfield} fade-in`}
                 id="outlined-basic"
                 label="Email"
-                variant="outlined" />
+
+            />
             <Button size="large" className={`${classes.submit} fade-in`} variant="contained" color="secondary" >Submit</Button>
             <img className={classes.triangle} src={`${process.env.PUBLIC_URL}/assets/triangle.png`} />
             <img className={classes.cross} src={`${process.env.PUBLIC_URL}/assets/cross.png`} />

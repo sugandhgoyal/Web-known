@@ -142,7 +142,9 @@ export const IntroPage = () => {
           />
           <Container className={classes.container}>
             <h1 className={classes.leftHeading}>You want to change the world. We want to help you do it.</h1>
-            <p>We help <div className={classes.animation} ><ReactJsTyping StringList={listOfString} speed={500} /></div>build their brand, <br />improve their marketing and scale their impact.</p>
+            <p>We help <div className={classes.animation} >
+              <ReactJsTyping speed={1000} StringList={listOfString} speed={500} />
+            </div>build their brand, <br />improve their marketing and scale their impact.</p>
             <div className={classes.toolbar}>
               <Button className={classes.button}><Link href="#services">
                 Know More</Link></Button>

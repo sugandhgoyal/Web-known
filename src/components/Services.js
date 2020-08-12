@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '34px !important',
         lineHeight: '40px !important',
         fontWeight: '700',
-        width: '30%',
+        width: '40%',
         margin: '0 auto',
         color: theme.palette.text.primary,
         [theme.breakpoints.down('600')]: {
@@ -99,7 +99,7 @@ export const Services = () => {
 
     return (
         <Container className={classes.wrapper} maxWidth="lg" id="services">
-            <h2 className={classes.heading}>High-End Services For Digital Business</h2>
+            <h2 className={classes.heading}>High-End Services For You</h2>
             <p className={classes.subHeading} >Wherever you are on your journey, we can help you get to the next stage with speed and ease.</p>
             <Grid container className={classes.cardcontainer}>
                 <Grid item lg={3} sm={6} xs={6}>
