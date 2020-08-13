@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   img: {
-    height: '50px',
+    height: '40px',
     objectFit: 'cover',
     padding: '8px 0 0 130px',
   },
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 2
   },
   gridItem: {
-    padding: '15px 0',
+    padding: '10px 0',
   },
   link: {
     fontSize: '16px',

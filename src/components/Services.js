@@ -5,9 +5,10 @@ import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        paddingBottom: '90px',
+        padding: '90px 0',
         textAlign: 'center',
         maxWidth: '100%',
+        background: '#fafafa',
         [theme.breakpoints.down('600')]: {
             padding: '0 15px 50px 15px;',
         }

@@ -9,9 +9,11 @@ import firebase from '../services/firebase';
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        paddingBottom: '90px',
+        padding: '60px 0 90px 0',
         textAlign: 'center',
         maxWidth: '100%',
+        background: '#fafafa',
+
         '& p': {
             lineHeight: '27px',
             color: '#36415A',
