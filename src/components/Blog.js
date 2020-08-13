@@ -32,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('600')]: {
       fontSize: '26px !important',
       marginTop: '0',
+      lineHeight: '28px !important',
+      marginBottom: '15px',
     }
   },
   subHeading: {
@@ -42,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
     margin: '25px auto',
     [theme.breakpoints.down('600')]: {
       width: '100%',
+      margin: '15px auto',
+      fontSize: '15px',
+      lineHeight: '23px',
     }
   },
   imgContainer: {
@@ -102,22 +107,20 @@ export const Blog = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth < 600)
-        setIsMobile(true);
-      else
-        setIsMobile(false);
-    }, false);
+    if (window.innerWidth < 600)
+      setIsMobile(true);
+    else
+      setIsMobile(false);
 
-    const colorRef = firebase.database().ref('values');
+    // const colorRef = firebase.database().ref('values');
     // console.log("colorRef", colorRef);
-    colorRef.once('value', (snapshot) => {
-      let colors = snapshot.val();
-      console.log("colors", colors)
-    })
+    // colorRef.once('value', (snapshot) => {
+    //   let colors = snapshot.val();
+    //   console.log("colors", colors)
+    // })
   }, []);
 
-  const animationClass = isMobile ? 'fade-in' : '';
+  const animationClass = isMobile ? '' : 'fade-in';
 
   return (
     <Container className={classes.wrapper} maxWidth="lg" id="blog">

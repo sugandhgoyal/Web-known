@@ -11,30 +11,22 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   paper: {
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    backgroundColor: 'white',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+    border: 'none',
   },
 }));
 
-export default function TransitionsModal() {
+export default function TransitionsModal(props) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const {
+    handleClose,
+    open
+  } = props;
 
   return (
-    <div>
-      <button type="button" onClick={handleOpen}>
-        react-transition-group
-      </button>
+    <>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -49,11 +41,10 @@ export default function TransitionsModal() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">react-transition-group animates me.</p>
+            <h2 id="transition-modal-title">Add video</h2>
           </div>
         </Fade>
       </Modal>
-    </div>
+    </>
   );
 }

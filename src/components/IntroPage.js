@@ -2,6 +2,7 @@ import React, { Component, useEffect } from 'react';
 import { Chip, Avatar, Container, Grid, Button, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ReactJsTyping from 'reactjs-typing-effect';
+import TransitionsModal from './Modal/VideoModal';
 // import { Widget, addResponseMessage } from 'react-chat-widget';
 // import 'react-chat-widget/lib/styles.css';
 
@@ -114,6 +115,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const IntroPage = () => {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
 
   const listOfString = ['customers', 'companies', 'organizations', 'brands', 'people'];
 
@@ -128,9 +130,13 @@ export const IntroPage = () => {
   //   // Now send the message throught the backend API
   // };
 
-  const openModal = () => {
+  const handleModalOpen = () => {
+    setOpen(true);
+  };
 
-  }
+  const handleModalClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -154,12 +160,15 @@ export const IntroPage = () => {
             <div className={classes.toolbar}>
               <Button className={classes.button}><Link href="#services">
                 Know More</Link></Button>
-              <span className={classes.playIconContainer} onClick={() => openModal()}>
+              <span className={classes.playIconContainer} onClick={() => handleModalOpen()}>
                 <img className={classes.playIcon} src={`${process.env.PUBLIC_URL}/assets/play_arrow.svg`} />
               </span>
               <div>Intro Video</div>
             </div>
           </Container>
+          <TransitionsModal
+            open={open}
+            handleClose={handleModalClose} />
         </Grid>
         <Grid item lg={6} xs={12}>
           <img className={classes.image} src={`${process.env.PUBLIC_URL}/assets/freelance.jpg`} />

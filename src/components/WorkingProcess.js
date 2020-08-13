@@ -91,18 +91,14 @@ export const WorkingProcess = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth < 600)
-        setIsMobile(true);
-      else
-        setIsMobile(false);
-    }, false);
-
+    if (window.innerWidth < 600)
+      setIsMobile(true);
+    else
+      setIsMobile(false);
   }, []);
 
-  const animationClass = isMobile ? 'slide-in from-left' : '';
+  const animationClass = isMobile ? '' : 'slide-in from-left';
 
-  console.log("animationClass", animationClass)
   return (
     <Container className={classes.wrapper} maxWidth="lg" id="process">
       <Grid container className={classes.dataContainer}>
@@ -115,26 +111,6 @@ export const WorkingProcess = () => {
           <p className={classes.subtitle}>We believe that any enterprising individual has the ability to change the world. But we also recognise that changing the world by yourself is hard. Really hard!</p>
           <h3 className={classes.bold}>When you’re the founder, the fundraiser, the marketer and the project manager it can be difficult to make the kind of impact you dream of.</h3>
           <div className={classes.subtitle}>The good news is, you don’t have to do it all by yourself. We exist to ensure good ideas and good causes gain the support they need to make a bigger difference.</div>
-          {/* <div className={classes.demo}>
-                        <List>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <RoundedCheckbox />
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary="When you’re the founder, the fundraiser, the marketer and the project manager it can be difficult to make the kind of impact you dream of."
-                                />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemIcon>
-                                    <RoundedCheckbox />
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary="The good news is, you don’t have to do it all by yourself. We exist to ensure good ideas and good causes gain the support they need to make a bigger difference."
-                                />
-                            </ListItem>
-                        </List>
-                    </div> */}
         </Grid>
       </Grid>
     </Container>

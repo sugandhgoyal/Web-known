@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     maxWidth: '100%',
     [theme.breakpoints.down('600')]: {
-      padding: '50px 15px !important',
+      padding: '30px 15px !important',
     }
   },
   img1: {
@@ -61,17 +61,14 @@ export const HowWeDoIt = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth < 600)
-        setIsMobile(true);
-      else
-        setIsMobile(false);
-    }, false);
-
+    if (window.innerWidth < 600)
+      setIsMobile(true);
+    else
+      setIsMobile(false);
   }, []);
 
-  const rightAnimationClass = isMobile ? 'slide-in from-right' : '';
-  const leftAnimationClass = isMobile ? 'slide-in from-right' : '';
+  const rightAnimationClass = isMobile ? '' : 'slide-in from-right';
+  const leftAnimationClass = isMobile ? '' : 'slide-in from-right';
 
   return (
     <Container className={classes.wrapper} maxWidth="lg">
