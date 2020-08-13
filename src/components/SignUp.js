@@ -13,14 +13,14 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         position: 'relative',
         [theme.breakpoints.down('600')]: {
-            margin: '50px 0',
+            margin: '25px 0 50px 0',
             padding: '50px 15px',
             background: theme.palette.primary.main
         },
         '& p': {
-            lineHeight: '27px',
+            lineHeight: '23px',
             color: 'white',
-            fontSize: '16px',
+            fontSize: '17px',
             fontFamily: `'Work Sans', sans-serif`,
         },
     },
@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '26px !important',
             margin: '0 auto',
             width: '100%',
+            lineHeight: '28px !important',
         }
     },
     textfield: {
@@ -55,7 +56,9 @@ const useStyles = makeStyles((theme) => ({
             fontWeight: '500'
         },
         [theme.breakpoints.down('600')]: {
-            width: '90%',
+            padding: '21px 16px',
+            margin: '5px',
+            width: '80%',
         }
     },
     submit: {

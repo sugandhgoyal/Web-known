@@ -4,14 +4,24 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     width: '100%',
+    boxShadow: "0 1px 2px 0 rgba(148,150,159,.3)",
+    padding: '0',
     [theme.breakpoints.up('600')]: {
       display: 'none',
     },
   },
   img: {
-    height: '60px',
+    height: '50px',
     objectFit: 'cover',
-    padding: '0 0 0 30%',
+  },
+  header: {
+    fontSize: '19px',
+    fontWeight: '500',
+    fontFamily: `'Work Sans', sans-serif`,
+    letterSpacing: '-0.5px',
+    wordSpacing: '-2.9px',
+    textAlign: 'center',
+    marginLeft: '11%',
   },
   menuHeader: {
     display: 'flex',
@@ -76,6 +86,7 @@ export const HamburgerMenu = () => {
       <div className={classes.menuHeader}>
         <span className={classes.menuButton} onClick={openNav}>&#9776;</span>
         <img src={process.env.PUBLIC_URL + '/assets/logo4.jpg'} className={classes.img} />
+        <div className={classes.header}>Web Known</div>
       </div>
       {toggleMenu === true &&
         <div id="mySidenav" className={classes.sidenav}>

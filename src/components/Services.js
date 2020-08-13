@@ -21,7 +21,10 @@ const useStyles = makeStyles((theme) => ({
         margin: '25px auto',
         [theme.breakpoints.down('600')]: {
             width: '100%',
-        }
+            margin: '15px auto',
+            fontSize: '15px',
+            lineHeight: '23px',
+        },
     },
     heading: {
         fontSize: '34px !important',
@@ -34,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '26px !important',
             margin: '0',
             width: '100%',
-
+            lineHeight: '28px !important',
         }
     },
     imgContainer: {

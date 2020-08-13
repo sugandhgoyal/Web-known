@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: '0 9% 1% 9%',
     [theme.breakpoints.down('600')]: {
-      padding: '15px',
+      padding: '25px 15px',
     },
   },
   headerImage: {
@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '27px',
         color: '#36415A',
         minHeight: '82px',
+        fontSize: '17px',
       }
     },
   },
@@ -43,8 +44,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '55px',
     margin: '20px 0',
     [theme.breakpoints.down('600')]: {
-      fontSize: '26px',
+      fontSize: '33px',
       lineHeight: '36px',
+      margin: '15px 0',
     },
   },
   image: {
@@ -64,7 +66,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: `'Work Sans', sans-serif`,
     [theme.breakpoints.down('600')]: {
       fontSize: '14px',
-      margin: '20px 0 0 0',
+      margin: '0',
+      padding: '13px 20px',
     },
     '& a': {
       color: 'white !important',
@@ -81,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
     width: '65%',
     justifyContent: 'space-between',
     alignItems: 'center',
+    [theme.breakpoints.down('600')]: {
+      width: '90%',
+    },
   },
   playIcon: {
     height: '27px',
@@ -88,8 +94,8 @@ const useStyles = makeStyles((theme) => ({
   },
   playIconContainer: {
     display: 'flex',
-    height: '54px',
-    width: '54px',
+    height: '44px',
+    width: '44px',
     textAlign: 'center',
     borderRadius: '50%',
     border: '1px solid #36415a',

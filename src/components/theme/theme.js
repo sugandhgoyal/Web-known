@@ -44,7 +44,10 @@ export const theme = createMuiTheme({
         marginLeft: '30px',
         padding: '6px 20px 6px 6px!important',
         height: '41px',
-        borderRadius: '50px'
+        borderRadius: '50px',
+        '@media (max-width: 600px)': {
+          marginLeft: '0',
+        }
       },
       label: {
         color: '#36415A',
