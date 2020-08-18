@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
             display: 'none'
         }
     },
-    '@placeholderframes spin': {
+    '@keyframes spin': {
         "100%":
         {
             transform: 'rotate(360deg)',
