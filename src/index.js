@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {  ThemeProvider } from '@material-ui/core/styles';
 import { theme } from './components/theme/theme';
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />

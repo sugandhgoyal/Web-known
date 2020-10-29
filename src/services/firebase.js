@@ -11,11 +11,5 @@ const firebaseConfig = {
     measurementId: "G-9TBDV95Y0K"
 };
 firebase.initializeApp(firebaseConfig);
-let storage = firebase.storage();
-// let storageRef = storage.ref();
-// var imagesRef = storageRef.child('images');
-// let yo = storageRef.child('image1.jpg');
-// console.log("yo", yo.fullPath)
-// console.log("imagesRef", imagesRef)
 
 export default firebase;

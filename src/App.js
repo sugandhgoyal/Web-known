@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {
-  BrowserRouter as Router,
+  StaticRouter as Router,
   Switch,
   Route,
   Link
