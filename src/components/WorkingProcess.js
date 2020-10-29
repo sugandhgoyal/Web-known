@@ -1,8 +1,8 @@
-import React, { Component, useEffect, useState } from 'react'
-import { Container, Grid, Chip, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import React, { useEffect, useState } from 'react'
+import { Container, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-import RoundedCheckbox from './Fields/RoundedCheckbox';
+// import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+// import RoundedCheckbox from './Fields/RoundedCheckbox';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   dataContainer: {
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   img: {
     width: '100%',
@@ -102,8 +103,8 @@ export const WorkingProcess = () => {
   return (
     <Container className={classes.wrapper} maxWidth="lg" id="process">
       <Grid container className={classes.dataContainer}>
-        <Grid item lg={5} xs={6} className={`${classes.leftPart}`}>
-          <img className={`${classes.img} ${animationClass} `} src={`${process.env.PUBLIC_URL}/assets/graph.png`} />
+        <Grid item lg={5} xs={12} className={`${classes.leftPart}`}>
+          <img className={`${classes.img} ${animationClass} `} src={`${process.env.PUBLIC_URL}/assets/progress1.png`} />
         </Grid>
         <Grid item lg={5} xs={12} className={`${classes.rightPart} ${animationClass} `}>
           <div className={classes.chip}>Our working process</div>

@@ -93,6 +93,10 @@ const useStyles = makeStyles((theme) => ({
     height: '27px',
     width: '27px',
   },
+  video: {
+    width: '100%',
+    height: '100%'
+  },
   playIconContainer: {
     display: 'flex',
     height: '44px',
@@ -171,7 +175,10 @@ export const IntroPage = () => {
             handleClose={handleModalClose} />
         </Grid>
         <Grid item lg={6} xs={12}>
-          <img className={classes.image} src={`${process.env.PUBLIC_URL}/assets/freelance.jpg`} />
+          <video className={classes.video} autoPlay loop muted>
+            <source src={`${process.env.PUBLIC_URL}/assets/home_animation.mp4`} type='video/mp4' />
+            <source src={`${process.env.PUBLIC_URL}/assets/home_animation.mp4`} type="video/ogg" />
+          </video>
         </Grid>
       </Grid>
     </div>

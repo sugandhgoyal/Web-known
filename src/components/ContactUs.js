@@ -94,6 +94,11 @@ const useStyles = makeStyles((theme) => ({
 
     },
   },
+  listContainer: {
+    '& li': {
+      padding: '10px',
+    }
+  },
   bottomPart3: {
     display: 'flex',
     flexDirection: 'column',
@@ -232,7 +237,7 @@ export const ContactUs = () => {
           </div>
         </Grid>
         <Grid item xs={12} lg={4} className={classes.bottomPart2}>
-          <Grid item xs lg={3}>
+          <Grid item xs lg={3} className={classes.listContainer}>
             <div>
               <h3>Quick Links</h3>
               <List component="nav" aria-label="main" className={classes.list}>
@@ -251,7 +256,7 @@ export const ContactUs = () => {
               </List>
             </div>
           </Grid>
-          <Grid item xs lg={3}>
+          <Grid item xs lg={3} className={classes.listContainer}>
             <div>
               <h3>Services</h3>
               <List component="nav" aria-label="main" className={classes.list}>
