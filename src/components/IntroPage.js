@@ -164,10 +164,10 @@ export const IntroPage = () => {
             <div className={classes.toolbar}>
               <Button className={classes.button}><Link href="#services">
                 Know More</Link></Button>
-              <span className={classes.playIconContainer} onClick={() => handleModalOpen()}>
+              {/* <span className={classes.playIconContainer} onClick={() => handleModalOpen()}>
                 <img className={classes.playIcon} src={`${process.env.PUBLIC_URL}/assets/play_arrow.svg`} />
               </span>
-              <div>Intro Video</div>
+              <div>Intro Video</div> */}
             </div>
           </Container>
           <TransitionsModal
