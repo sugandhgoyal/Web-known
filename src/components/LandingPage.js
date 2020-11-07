@@ -4,7 +4,7 @@ import SignUp from './SignUp';
 import Services from './Services';
 import WorkingProcess from './WorkingProcess';
 import styled from 'styled-components';
-import HowWeDoIt from './HowWeDoIt';
+import AboutUs from './AboutUs';
 import Blog from './Blog';
 import ContactUs from './ContactUs';
 import './theme/animation.css';
@@ -70,12 +70,12 @@ export const LandingPage = () => {
       <div className={classes.wrapper}>
         <HamburgerMenu />
         <IntroPage />
+        <AboutUs />
         <SignUp />
         <Services />
         <HorizontalLine />
         <WorkingProcess />
         <HorizontalLine />
-        <HowWeDoIt />
         <HorizontalLine />
         <Blog />
         <ContactUs />

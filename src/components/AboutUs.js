@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '90px 160px',
     textAlign: 'center',
     maxWidth: '100%',
+    background: '#fafafa',
     [theme.breakpoints.down('600')]: {
       padding: '30px 15px !important',
     }
@@ -60,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const HowWeDoIt = () => {
+export const AboutUs = () => {
   const classes = useStyles();
   const [isMobile, setIsMobile] = useState(false);
 
@@ -74,7 +75,7 @@ export const HowWeDoIt = () => {
   const animationClass = isMobile ? '' : 'slide-in from-right';
 
   return (
-    <Container className={classes.wrapper} maxWidth="lg">
+    <Container id="about" className={classes.wrapper} maxWidth="lg">
       <Grid container className={classes.dataContainer}>
         <Grid item lg={6} xs={12} className={`${classes.rightPart} ${animationClass}`}>
           <h1 className={classes.title}>The world needs people like you. And you need people like us.</h1>
@@ -115,4 +116,4 @@ export const HowWeDoIt = () => {
   )
 }
 
-export default HowWeDoIt;
+export default AboutUs;

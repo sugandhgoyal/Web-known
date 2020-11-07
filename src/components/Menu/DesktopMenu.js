@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   img: {
-    height: '40px',
+    height: '45px',
     objectFit: 'cover',
     padding: '8px 0 0 130px',
   },
@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#36415a',
     padding: '0 20px',
     fontFamily: `'Work Sans', sans-serif`,
-    fontWeight: '500'
+    fontWeight: '500',
+    lineHeight: '30px',
   },
   button: {
     marginTop: '9px'
@@ -58,13 +59,15 @@ export const Menu = () => {
 
   return (
     <Grid container className={`${classes.container} header`}>
-      <Grid item lg={4} className={classes.gridItem}>
+      <Grid item lg={5} className={classes.gridItem}>
         <img src={process.env.PUBLIC_URL + '/assets/logo2.png'} className={classes.img} />
       </Grid>
-      <Grid item lg={4} className={classes.gridItem}>
+      <Grid item lg={5} className={classes.gridItem}>
         <ul className={classes.linkslist}>
           <Link className={classes.link} href="/">
             Home</Link>
+          <Link className={classes.link} href="#about">
+            About</Link>
           <Link className={classes.link} href="#services">
             Services</Link>
           <Link className={classes.link} href="#blog">

@@ -8,7 +8,7 @@ import TransitionsModal from './Modal/VideoModal';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    padding: '0 9% 1% 9%',
+    padding: '0 9% 8% 9%',
     [theme.breakpoints.down('600')]: {
       padding: '25px 15px',
     },
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'cover',
     width: '100%',
     zIndex: '-1',
-    marginBottom: '70px',
+    marginBottom: '60px',
     [theme.breakpoints.down('600')]: {
       display: 'none'
     },
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '56px',
     fontWeight: '700',
     lineHeight: '55px',
-    margin: '20px 0',
+    margin: '30px 0',
     [theme.breakpoints.down('600')]: {
       fontSize: '33px',
       lineHeight: '36px',
